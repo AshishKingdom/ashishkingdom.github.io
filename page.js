@@ -116,7 +116,7 @@ function setup() {
 	btmLinkText.y = canvasHeight*0.95;
 
 	//background animation stuff;
-	for(var i=0;i<100;i++){
+	for(var i=0;i<50;i++){
 		bgPoints.push(new Points());
 	}
 
