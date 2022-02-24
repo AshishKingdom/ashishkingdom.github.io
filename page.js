@@ -55,22 +55,7 @@ function desktopInterface() {
 
 function drawBackground() {
 	background(5);
-	for(var i=0;i<bgPoints.length;i++){
-		bgPoints[i].draw();
-		bgPoints[i].updatePosition();
-		bgPoints[i].checkBoundaries();
-		for(var j=i+1;j<bgPoints.length;j++){
-			// for(var k=j+1;k<bgPoints.length;k++){
-				var d1 = dist(bgPoints[i].x,bgPoints[i].y, bgPoints[j].x, bgPoints[j].y);
-				// var d2 = dist(bgPoints[i].x,bgPoints[i].y, bgPoints[k].x, bgPoints[k].y);
-				if(d1<100){
-					strokeWeight(1);
-					stroke(255,50);
-					line(bgPoints[i].x,bgPoints[i].y, bgPoints[j].x, bgPoints[j].y);
-				}
-			// }
-		}
-	}
+	drawPoints(bgPoints);
 }
 
 function drawNavBarD() {
