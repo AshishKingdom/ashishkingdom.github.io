@@ -1,0 +1,149 @@
+
+/* common */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.matrix-font {
+    font-family: 'Silkscreen', sans-serif;
+    color: rgb(2, 204, 2);
+}
+
+
+.landing-screen {
+    /* covering entire screen with a matrix background */
+    background: url('../images/bg_3.png') no-repeat center center fixed;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* centering the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.small-font{
+    font-size: 1rem;
+    color:white
+}
+.heading {
+    font-size: 8rem;
+}
+/* navbar inside landing screen */
+.navbar {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    /* green glow effect around border */
+    box-shadow: 0 0  10px 5px rgba(0, 255, 0, 0.5);
+}
+
+
+.navbar-item {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'DM Sans', sans-serif;
+}
+.navbar-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(2, 204, 2);
+    transition: width .3s;
+    align: center;
+}
+.navbar-item:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+/* super nice hover effect */
+.navbar-item:hover {
+    color: rgb(2, 204, 2);
+    transform: scale(1.2);
+    
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(37, 162, 68);
+    border-top:1px solid rgb(2, 204, 2);
+    border-bottom:1px solid rgb(2, 204, 2);
+}
+
+.heading-left {
+    flex: 50%; /* Use 40% of the available width */
+    font-size: 3.5rem;
+    color: rgb(37, 162, 68);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content-right {
+    flex: 50%; /* Use 60% of the available width */
+    box-sizing: border-box;
+    padding: 40px;
+    font-family: 'DM Sans', sans-serif;
+    /* font-weight: bold; */
+    color:rgb(133,210,153);
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .heading {
+        font-size: 5rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .heading {
+        font-size: 3rem;
+    }
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 10px;
+        margin: 30px 0px;
+        width: 50%;
+
+    }
+    .navbar-item{
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+    
+    .about-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    .heading-left {
+        font-size: 2rem;
+        padding: 20px;
+    }
+    .content-right {
+        font-size: 1rem;
+        padding: 20px;
+        text-align: center;
+    }
+}

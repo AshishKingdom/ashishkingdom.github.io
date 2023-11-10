@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<title>Ashish's Portfolio</title>
+<body>
+<div class="landing-screen">
+  <div class="small-font">Hello 👋 , my name is</div>
+  <div class="matrix-font heading">
+    ASHISH
+  </div>
+  <div class="navbar">
+    <span class="navbar-item">ABOUT</span>
+    <span class="navbar-item">PROJECTS</span>
+    <span class="navbar-item">CONTACT</span>
+  </div>
+</div>
+<div class="about-section">
+  <div class="heading-left matrix-font">WELCOME TO THE "MATRIX"</div>
+  <div class="content-right">
+  </div>
+</div>
+<script>
+  // create a typing effect on .content-right
+  const text = "Hey! My name is Ashish Kushwaha, a pre-final year student at JSS Academy of Technical Education Noida. In the digital realm, I craft powerful web applications,mastering the backend with Flask, FastAPI, and Django. I navigate the frontend landscape, sculpting interfaces with ReactJS. Beyond coding, I embrace the challenges of competitive programming, wielding the prowess of Data Structures and Algorithms. Venturing into the Machine Learning abyss, I decode patterns and algorithms to unravel the secrets of AI.";
+  const contentRight = document.querySelector(".content-right");
+  let index = 0;
+  function typing() {
+    var content = contentRight.innerHTML;
+    // remove last character
+    content = content.substr(0, content.length - 1);
+    if (index < text.length) {
+      content += text.charAt(index);
+      content += "█";
+      contentRight.innerHTML = content;
+      index++;
+      setTimeout(typing, 20);
+    }
+
+  }
+  typing();
+</script>
+</body>
+</html>
