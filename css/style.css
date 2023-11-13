@@ -1,6 +1,6 @@
 /*
     @Author: Ashish Kuswaha
-    @Date: 13/11/2023
+    @Last Modified: 13/11/2023
     @Description: This file is used for the portfolio page.
 */
 
@@ -150,9 +150,9 @@ a.link {
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
-  color:white;
+  color: white;
   font-size: 1.25rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 span.skill-category {
   color: rgb(2, 204, 2);
@@ -407,6 +407,8 @@ span.skill-category {
   margin-bottom: 5px;
   font-size: 25px;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
 }
 .timeline-content span {
   font-size: 15px;
@@ -574,7 +576,7 @@ span.skill-category {
     padding: 20px;
     text-align: center;
   }
-  .project-section{
+  .project-section {
     padding: 10px;
   }
   .project-container {

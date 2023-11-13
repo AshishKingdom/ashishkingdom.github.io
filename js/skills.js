@@ -1,3 +1,8 @@
+/*
+    @Author: Ashish Kuswaha
+    @Last Modified: 13/11/2023
+    @Description: This file is used for storing skills data.
+*/
 const skills_data = [
   {
     category: "Languages",

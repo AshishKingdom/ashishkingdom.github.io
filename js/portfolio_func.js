@@ -1,6 +1,6 @@
 /*
     @Author: Ashish Kuswaha
-    @Date: 13/11/2023
+    @Last Modified: 13/11/2023
     @Description: This file is used for the portfolio page.
 */
 
@@ -49,6 +49,54 @@ timeline_data.forEach((timeline) => {
 });
 document.querySelector(".timeline-container").innerHTML = temp_data;
 
+// preprocessing the project data
+temp_data = "";
+let project_menu_data = "";
+count = 0;
+project_data.forEach((project) => {
+  count++;
+  project_menu_data += `<span class="project-name-list-item" data-project-id="${
+    project.id
+  }" data-active="${count == 1 ? "true" : "false"}">${project.name}</span>`;
+
+  temp_data += `<div class="project-detail" data-project-id="${
+    project.id
+  }" data-active="${
+    count == 1 ? "true" : "false"
+  }"><div class="project-title">${project.title}</div>
+  <div class="project-image"><img src="${project.image}" alt="${
+    project.title
+  }" /></div>
+  <div class="project-description">${project.description}</div>
+  <div class="project-tech-stacks">
+    ${project.techStacks
+      .map((techStack) => {
+        return `<span class="project-tech-stack">${techStack}</span>`;
+      })
+      .join("")}
+  </div>
+  <div class="project-links">
+      ${
+        project.link.github
+          ? `<a href="${project.link.github}" class="project-link">Github</a>`
+          : ""
+      }
+      ${
+        project.link.youtube
+          ? `<a href="${project.link.youtube}" class="project-link">Youtube</a>`
+          : ""
+      }
+      ${
+        project.link.live
+          ? `<a href="${project.link.website}" class="project-link">Live</a>`
+          : ""
+      }
+  </div></div>`;
+});
+document.querySelector(
+  ".project-container"
+).innerHTML = `<div class="project-name-list-menu">${project_menu_data}</div>${temp_data}`;
+
 // create a typing effect on .content-right
 const text =
   "Hey! My name is Ashish Kushwaha, a pre-final year student at JSS Academy of Technical Education Noida. In the digital realm, I craft powerful web applications,mastering the backend with Flask, FastAPI, and Django. I navigate the frontend landscape, sculpting interfaces with ReactJS. Beyond coding, I embrace the challenges of competitive programming, wielding the prowess of Data Structures and Algorithms. Venturing into the Machine Learning abyss, I decode patterns and algorithms to unravel the secrets of AI.";
@@ -72,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".content-not-ready").style.display = "block";
     typing();
-  }, 2000);
+  }, 4000);
 });
 
 // handling of project menu click
