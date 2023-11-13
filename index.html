@@ -1,50 +1,298 @@
-<!doctype html>
+<!--
+  @Author: Ashish Kushwaha (AshishKingdom)
+  @Date:   11/11/2023
+  @Description: This is the main file for the portfolio website.
+-->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
-</head>
-<title>Ashish's Portfolio</title>
-<body>
-<div class="landing-screen">
-  <div class="small-font">Hello 👋 , my name is</div>
-  <div class="matrix-font heading">
-    ASHISH
-  </div>
-  <div class="navbar">
-    <span class="navbar-item">ABOUT</span>
-    <span class="navbar-item">PROJECTS</span>
-    <span class="navbar-item">CONTACT</span>
-  </div>
-</div>
-<div class="about-section">
-  <div class="heading-left matrix-font">WELCOME TO THE "MATRIX"</div>
-  <div class="content-right">
-  </div>
-</div>
-<script>
-  // create a typing effect on .content-right
-  const text = "Hey! My name is Ashish Kushwaha, a pre-final year student at JSS Academy of Technical Education Noida. In the digital realm, I craft powerful web applications,mastering the backend with Flask, FastAPI, and Django. I navigate the frontend landscape, sculpting interfaces with ReactJS. Beyond coding, I embrace the challenges of competitive programming, wielding the prowess of Data Structures and Algorithms. Venturing into the Machine Learning abyss, I decode patterns and algorithms to unravel the secrets of AI.";
-  const contentRight = document.querySelector(".content-right");
-  let index = 0;
-  function typing() {
-    var content = contentRight.innerHTML;
-    // remove last character
-    content = content.substr(0, content.length - 1);
-    if (index < text.length) {
-      content += text.charAt(index);
-      content += "█";
-      contentRight.innerHTML = content;
-      index++;
-      setTimeout(typing, 20);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Ashish's Portfolio</title>
+    <style>
+      .content-not-ready {
+        display: none;
+      }
+      body.loading {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: black;
+        height: 100vh;
+      }
+      @keyframes ldio-0chhxaqs32b9 {
+        0% {
+          background: #00ff00;
+        }
+        12.5% {
+          background: #00ff00;
+        }
+        12.625% {
+          background: #008400;
+        }
+        100% {
+          background: #008400;
+        }
+      }
+      .ldio-0chhxaqs32b9 div {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #008400;
+        animation: ldio-0chhxaqs32b9 1s linear infinite;
+      }
+      .loadingio-spinner-blocks-f6re9kg8ubs {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        background: black;
+      }
+      .ldio-0chhxaqs32b9 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0; /* see note above */
+      }
+      .ldio-0chhxaqs32b9 div {
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body class="loading">
+    <div class="loader">
+      <div class="loadingio-spinner-blocks-f6re9kg8ubs">
+        <div class="ldio-0chhxaqs32b9">
+          <div style="left: 68px; top: 68px; animation-delay: 0s"></div>
+          <div style="left: 90px; top: 68px; animation-delay: 0.125s"></div>
+          <div style="left: 112px; top: 68px; animation-delay: 0.25s"></div>
+          <div style="left: 68px; top: 90px; animation-delay: 0.875s"></div>
+          <div style="left: 112px; top: 90px; animation-delay: 0.375s"></div>
+          <div style="left: 68px; top: 112px; animation-delay: 0.75s"></div>
+          <div style="left: 90px; top: 112px; animation-delay: 0.625s"></div>
+          <div style="left: 112px; top: 112px; animation-delay: 0.5s"></div>
+        </div>
+      </div>
+    </div>
+    <div class="content-not-ready">
+      <div class="landing-screen">
+        <div class="small-font">Hello 👋 , my name is</div>
+        <div class="matrix-font heading">ASHISH</div>
+        <div class="navbar">
+          <a class="navbar-item" href="#about" data-target="about">ABOUT</a>
+          <a class="navbar-item" href="#projects" data-target="projects"
+            >PROJECTS</a
+          >
+          <a class="navbar-item" href="#contact" data-target="contact"
+            >CONTACT</a
+          >
+        </div>
+      </div>
+      <div class="about-section" data-target="about">
+        <div class="heading-left matrix-font">WELCOME TO THE "MATRIX"</div>
+        <div class="content-right"></div>
+      </div>
+      <div class="marquee">
+        <div class="marquee-content">
+          <div class="marquee-item"><img src="images/icon_js.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_python.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_cpp.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_c.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_html.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_css.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_react.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_django.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_flask.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_fastapi.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_mysql.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_mongo.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_git.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_linux.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_nginx.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_docker.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_sqlite.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_redis.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_azure.svg" /></div>
 
-  }
-  typing();
-</script>
-</body>
+          <div class="marquee-item"><img src="images/icon_js.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_python.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_cpp.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_c.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_html.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_css.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_react.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_django.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_flask.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_fastapi.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_mysql.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_mongo.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_git.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_linux.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_nginx.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_docker.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_sqlite.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_redis.svg" /></div>
+          <div class="marquee-item"><img src="images/icon_azure.svg" /></div>
+        </div>
+      </div>
+      <div class="project-section" data-target="projects">
+        <center><span class="heading matrix-font">PROJECTS</span></center>
+        <div class="project-container">
+          <div class="project-name-list-menu">
+            <span
+              class="project-name-list-item"
+              data-active="true"
+              data-project-id="1"
+              >Project 1</span
+            >
+            <span class="project-name-list-item" data-project-id="2"
+              >Project 2</span
+            >
+            <span class="project-name-list-item">Project 3</span>
+            <span class="project-name-list-item">Project 4</span>
+            <span class="project-name-list-item">Project 5</span>
+            <span class="project-name-list-item">Project 6</span>
+          </div>
+          <div class="project-detail" data-active="true" data-project-id="1">
+            <div class="project-title">Project 1</div>
+            <div class="project-image">
+              <img src="images/bg_3.png" />
+            </div>
+            <div class="project-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              euismod, nisl eget fermentum ultricies, nunc sapien aliquet nunc,
+              vitae convallis odio nisl eu nunc. Donec euismod, nisl eget
+              fermentum ultricies, nunc sapien aliquet nunc, vitae convallis
+              odio nisl eu nunc.
+            </div>
+            <div class="project-tech-stacks">
+              <span class="project-tech-stack">Python</span>
+              <span class="project-tech-stack">Flask</span>
+              <span class="project-tech-stack">ReactJS</span>
+              <span class="project-tech-stack">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="#">Github</a>
+              <a class="project-link" href="#">Live</a>
+            </div>
+          </div>
+          <div class="project-detail" data-active="false" data-project-id="2">
+            <div class="project-title">Project 2</div>
+            <div class="project-image">
+              <img src="images/bg_3.png" />
+            </div>
+            <div class="project-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              euismod, nisl eget fermentum ultricies, nunc sapien aliquet nunc,
+              vitae convallis odio nisl eu nunc. Donec euismod, nisl eget
+              fermentum ultricies, nunc sapien aliquet nunc, vitae convallis
+              odio nisl eu nunc.
+            </div>
+            <div class="project-tech-stacks">
+              <span class="project-tech-stack">C++</span>
+              <span class="project-tech-stack">C</span>
+              <span class="project-tech-stack">Docker</span>
+              <span class="project-tech-stack">Redis</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="#">Github</a>
+              <a class="project-link" href="#">Live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="experience-section">
+        <center><span class="heading matrix-font">EXPERIENCE</span></center>
+        <div class="timeline-container">
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>First Year</h3>
+              <span>Some work experience</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Seconed Year</h3>
+              <span>Some work experience</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Third Year</h3>
+              <span>Some work experience</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Fourth Year</h3>
+              <span>Some work experience</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Fifth Year</h3>
+              <span>Some work experience</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script src="/js/portfolio_func.js"></script>
+  </body>
 </html>
