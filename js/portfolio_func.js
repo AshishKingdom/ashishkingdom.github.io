@@ -1,8 +1,53 @@
 /*
     @Author: Ashish Kuswaha
-    @Date: 11/11/2023
+    @Date: 13/11/2023
     @Description: This file is used for the portfolio page.
 */
+
+//preprocessing the achievement data
+let temp_data = "";
+achievements.forEach((achievement) => {
+  temp_data += `<div class="achievement-info"><h3 class="achievement-title">${achievement.title}</h3><p class="achievement-description">${achievement.description}</p></div>`;
+});
+document.querySelector(".achievement").innerHTML = temp_data;
+
+// preprocessing the skills data
+temp_data = "";
+skills_data.forEach((skill) => {
+  temp_data += `<p><span class="skill-category">${skill.category} :</span>${skill.data}</p>`;
+});
+document.querySelector("div.skill-list").innerHTML = temp_data;
+
+// preprocessing the timeline data
+temp_data = "";
+let count = 0;
+timeline_data.forEach((timeline) => {
+  if (count % 2 == 0) {
+    temp_data += `<div class="timeline-block timeline-block-right">
+    <div class="marker"></div>
+    <div class="timeline-content">
+      <h3>${timeline.timeRange}</h3>
+      <span>${timeline.title}</span>
+      <p>
+        ${timeline.description}
+      </p>
+    </div>
+  </div>`;
+  } else {
+    temp_data += `<div class="timeline-block timeline-block-left">
+    <div class="marker"></div>
+    <div class="timeline-content">
+      <h3>${timeline.timeRange}</h3>
+      <span>${timeline.title}</span>
+      <p>
+        ${timeline.description}
+      </p>
+    </div>
+  </div>`;
+  }
+  count++;
+});
+document.querySelector(".timeline-container").innerHTML = temp_data;
 
 // create a typing effect on .content-right
 const text =
@@ -18,17 +63,16 @@ function typing() {
     content += "█";
     contentRight.innerHTML = content;
     index++;
-    setTimeout(typing, 20);
+    setTimeout(typing, 10);
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  // Simulate loading time (you can remove this in your actual implementation)
   setTimeout(function () {
     document.body.classList.remove("loading");
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".content-not-ready").style.display = "block";
     typing();
-  }, 4000); // Adjust the timeout as needed
+  }, 2000);
 });
 
 // handling of project menu click
@@ -69,9 +113,11 @@ document.querySelectorAll(".navbar-item").forEach((item) => {
 });
 
 // down arrow click
-document.querySelector(".down-arrow-animation").addEventListener("click", (event) => {
-  const target = document.querySelector(".about-section");
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-});
+document
+  .querySelector(".down-arrow-animation")
+  .addEventListener("click", (event) => {
+    const target = document.querySelector(".about-section");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });

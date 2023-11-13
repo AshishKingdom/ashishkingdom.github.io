@@ -1,6 +1,6 @@
 /*
     @Author: Ashish Kuswaha
-    @Date: 11/11/2023
+    @Date: 13/11/2023
     @Description: This file is used for the portfolio page.
 */
 
@@ -16,7 +16,9 @@ body {
   font-family: "Silkscreen", sans-serif;
   color: rgb(2, 204, 2);
 }
-
+a.link {
+  color: rgb(37, 162, 68);
+}
 /* landing screen */
 .landing-screen {
   background-color: black;
@@ -132,11 +134,33 @@ body {
   line-height: 2rem;
 }
 /* skills section */
+.skill-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  border-top: 1px solid rgb(2, 204, 2);
+}
+.skill-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  color:white;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+span.skill-category {
+  color: rgb(2, 204, 2);
+}
+
 .marquee {
   overflow: hidden;
-  background: black;
   padding: 20px;
-  border-top: 1px solid rgb(2, 204, 2);
 }
 .marquee-content {
   display: flex;
@@ -418,15 +442,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  padding: 10px;
   box-sizing: border-box;
-  border-left: 5px solid rgb(2, 204, 2);
-  margin: 20px 0;
+  flex-direction: column;
+  margin: 0px 20px;
 }
 .achievement-info {
-  margin-left: 20px;
+  background-color: black;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
   text-align: left;
+  border-left: 5px solid rgb(2, 204, 2);
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
 }
 .achievement-title {
   font-size: 1.5rem;
@@ -437,6 +465,7 @@ body {
   font-size: 1rem;
   color: white;
   font-family: "DM Sans", sans-serif;
+  line-height: 1.5rem;
 }
 /* quote section */
 .quote-section {
@@ -474,19 +503,22 @@ body {
   border-top: 1px solid rgb(2, 204, 2);
   flex-direction: column;
 }
-.resume-container, .contacts-content {
+.resume-container,
+.contacts-content {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
   width: 100%;
 }
-.resume-container>h1, .contacts-content>h1 {
+.resume-container > h1,
+.contacts-content > h1 {
   align-self: center;
   font-weight: normal;
   text-align: left;
 }
-.resume-content, .contacts-container {
-  flex:50%;
+.resume-content,
+.contacts-container {
+  flex: 50%;
   font-size: 1.5rem;
   color: white;
   font-family: "DM Sans", sans-serif;
@@ -494,9 +526,23 @@ body {
   padding: 50px;
 }
 .resume-content a {
-  font-family: 'Silkscreen', sans-serif;
+  font-family: "Silkscreen", sans-serif;
 }
-
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 56, 0);
+  color: white;
+  padding: 100px;
+}
+.site-info {
+  align-self: center;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
 @media screen and (max-width: 800px) {
   .heading {
     font-size: 3rem;
@@ -528,8 +574,12 @@ body {
     padding: 20px;
     text-align: center;
   }
+  .project-section{
+    padding: 10px;
+  }
   .project-container {
     flex-direction: column;
+    margin: 10px;
   }
   .project-name-list-menu {
     flex-direction: row;
@@ -577,10 +627,12 @@ body {
     float: none;
     direction: ltr;
   }
-  .resume-container, .contacts-content {
+  .resume-container,
+  .contacts-content {
     flex-direction: column;
   }
-  .resume-content, .contacts-container{
+  .resume-content,
+  .contacts-container {
     margin: 10px;
     padding: 25px;
     text-align: center;
