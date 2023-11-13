@@ -63,7 +63,15 @@ document.querySelectorAll(".navbar-item").forEach((item) => {
       "div[data-target='" + target + "']"
     );
     if (target_element) {
-      target_element.scrollIntoView({ behavior: "smooth", block: "center" });
+      target_element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
+});
+
+// down arrow click
+document.querySelector(".down-arrow-animation").addEventListener("click", (event) => {
+  const target = document.querySelector(".about-section");
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });

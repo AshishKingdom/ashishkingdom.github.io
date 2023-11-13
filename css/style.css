@@ -19,6 +19,7 @@ body {
 
 /* landing screen */
 .landing-screen {
+  background-color: black;
   background: url("../images/bg_3.png") repeat center center fixed;
   position: relative;
   width: 100%;
@@ -34,6 +35,34 @@ body {
 }
 .heading {
   font-size: 8rem;
+}
+.down-arrow-animation {
+  position: absolute;
+  bottom: 70px;
+  transform: translateX(-50%);
+  animation: down-arrow 1s ease infinite;
+  cursor: pointer;
+}
+.down-arrow-animation > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 4rem;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  animation: down-arrow 1s ease infinite;
+  color: rgb(2, 204, 2);
+}
+@keyframes down-arrow {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* navbar inside landing screen */
@@ -139,6 +168,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  background-color: black;
   background: url("../images/bg_2.png") repeat center center fixed;
 }
 .project-container {
@@ -286,6 +316,7 @@ body {
 }
 /* experience section */
 .experience-section {
+  background-color: black;
   background: url("../images/bg_1.png") repeat center center fixed;
   border-top: 1px solid rgb(2, 204, 2);
   padding: 20px;
@@ -294,7 +325,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .timeline-container {
   width: 80%;
   padding: 50px 0;
@@ -310,7 +340,7 @@ body {
   margin-left: -1px;
   width: 3px;
   height: 100%;
-  background: rgb(0, 56, 0);
+  background: #fffa;
   z-index: 1;
 }
 .timeline-block {
@@ -367,6 +397,105 @@ body {
   color: white;
   font-family: "Roboto", sans-serif;
 }
+/* Achievement Section */
+.heading-small {
+  font-size: 3rem;
+  color: rgb(2, 204, 2);
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Silkscreen", sans-serif;
+}
+.achievements-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  background: url("../images/bg_4.png") repeat center center fixed;
+  border-top: 1px solid rgb(2, 204, 2);
+  padding: 40px 0;
+}
+.achievement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: 5px solid rgb(2, 204, 2);
+  margin: 20px 0;
+}
+.achievement-info {
+  margin-left: 20px;
+  text-align: left;
+}
+.achievement-title {
+  font-size: 1.5rem;
+  color: rgb(2, 204, 2);
+  margin-bottom: 10px;
+}
+.achievement-description {
+  font-size: 1rem;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+/* quote section */
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background: url("../images/bg_5.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  border-top: 1px solid rgb(2, 204, 2);
+}
+.quote-content {
+  text-align: center;
+  max-width: 600px;
+}
+.quote-text {
+  font-size: 2rem;
+  font-family: "Silkscreen", sans-serif;
+  line-height: 1.5;
+}
+.quote-author {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: rgb(2, 204, 2);
+}
+/* resume contact section */
+.resume-contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  /* background: url("../images/bg_6.png") no-repeat center center fixed; */
+  border-top: 1px solid rgb(2, 204, 2);
+  flex-direction: column;
+}
+.resume-container, .contacts-content {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+}
+.resume-container>h1, .contacts-content>h1 {
+  align-self: center;
+  font-weight: normal;
+  text-align: left;
+}
+.resume-content, .contacts-container {
+  flex:50%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  margin: 20px;
+  padding: 50px;
+}
+.resume-content a {
+  font-family: 'Silkscreen', sans-serif;
+}
 
 @media screen and (max-width: 800px) {
   .heading {
@@ -388,7 +517,8 @@ body {
     flex-direction: column;
     padding: 50px 20px;
   }
-  .heading-left {
+  .heading-left,
+  .heading-small {
     font-size: 2rem;
     padding: 20px;
     text-align: center;
@@ -443,9 +573,16 @@ body {
   .timeline-block-right {
     float: none;
   }
-
   .timeline-block-left {
     float: none;
     direction: ltr;
+  }
+  .resume-container, .contacts-content {
+    flex-direction: column;
+  }
+  .resume-content, .contacts-container{
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
   }
 }
