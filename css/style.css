@@ -145,7 +145,7 @@ a.link {
 .skill-list {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 10px;
@@ -207,12 +207,11 @@ span.skill-category {
 }
 .project-name-list-menu {
   align-self: flex-start;
+  justify-content: start;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: nowrap;
-  align-items: center;
   min-width: 200px;
 }
 .project-name-list-menu > span {
@@ -224,30 +223,17 @@ span.skill-category {
   text-decoration: none;
   padding: 10px 20px;
 }
-.project-name-list-menu > span::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: rgb(2, 204, 2);
-  transition: width 0.3s;
-}
+
 .project-name-list-menu > span:hover {
-  color: rgb(2, 204, 2);
-  transform: scale(1.2);
+  color: black;
+  background-color: rgb(2, 204, 2);
 }
-.project-name-list-menu > span:hover::after {
-  width: 100%;
-  transition: width 0.3s;
-}
+
 .project-name-list-menu > span[data-active="true"] {
-  color: rgb(2, 204, 2);
-  transform: scale(1.15);
+  color: black;
+  background-color: rgb(2, 204, 2);
 }
-.project-name-list-menu > span[data-active="true"]::after {
-  width: 100%;
-  transition: width 0.3s;
-}
+
 .project-detail[data-active="false"] {
   display: none;
   opacity: 0;
