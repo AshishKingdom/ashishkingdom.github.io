@@ -1,6 +1,6 @@
 /*
     @Author: Ashish Kuswaha
-    @Last Modified: 13/11/2023
+    @Last Modified: 17/11/2023
     @Description: This file is used for the portfolio page.
 */
 
@@ -82,11 +82,11 @@ a.link {
 }
 .navbar-item {
   margin: 0 20px;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Silkscreen", sans-serif;
   text-decoration: none;
 }
 .navbar-item::after {
@@ -139,7 +139,8 @@ a.link {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: black;
+  background-color: black;
+  background: url("../images/bg_7.png") repeat center center fixed;
   border-top: 1px solid rgb(2, 204, 2);
 }
 .skill-list {
@@ -487,7 +488,6 @@ span.skill-category {
   justify-content: center;
   align-items: center;
   background-color: black;
-  /* background: url("../images/bg_6.png") no-repeat center center fixed; */
   border-top: 1px solid rgb(2, 204, 2);
   flex-direction: column;
 }
@@ -544,7 +544,7 @@ span.skill-category {
   }
   .navbar-item {
     margin: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .about-section {
