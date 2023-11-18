@@ -65,7 +65,7 @@ project_data.forEach((project) => {
     count == 1 ? "true" : "false"
   }"><div class="project-title">${project.title}</div>
   <div class="project-image"><img src="${project.image}" alt="${
-    project.title
+    project.title + " " + project.description
   }" /></div>
   <div class="project-description">${project.description}</div>
   <div class="project-tech-stacks">
