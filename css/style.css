@@ -22,7 +22,7 @@ a.link {
 /* landing screen */
 .landing-screen {
   background-color: black;
-  background: url("../images/bg_3.png") repeat center center fixed;
+  background: url("../images/bg_3.webp") repeat center center fixed;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -140,7 +140,7 @@ a.link {
   align-items: center;
   flex-direction: column;
   background-color: black;
-  background: url("../images/bg_7.png") repeat center center fixed;
+  background: url("../images/bg_6.png") repeat center center fixed;
   border-top: 1px solid rgb(2, 204, 2);
 }
 .skill-list {
@@ -328,7 +328,7 @@ span.skill-category {
 /* experience section */
 .experience-section {
   background-color: black;
-  background: url("../images/bg_1.png") repeat center center fixed;
+  background: url("../images/bg_1.webp") repeat center center fixed;
   border-top: 1px solid rgb(2, 204, 2);
   padding: 20px;
   display: flex;
