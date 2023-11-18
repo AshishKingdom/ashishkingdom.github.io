@@ -97,29 +97,12 @@ document.querySelector(
   ".project-container"
 ).innerHTML = `<div class="project-name-list-menu">${project_menu_data}</div>${temp_data}`;
 
-// create a typing effect on .content-right
-const text =
-  "Hey! My name is Ashish Kushwaha, a pre-final year student at JSS Academy of Technical Education Noida. In the digital realm, I craft powerful web applications,mastering the backend with Flask, FastAPI, and Django. I navigate the frontend landscape, sculpting interfaces with ReactJS. Beyond coding, I embrace the challenges of competitive programming, wielding the prowess of Data Structures and Algorithms. Venturing into the Machine Learning abyss, I decode patterns and algorithms to unravel the secrets of AI.";
-const contentRight = document.querySelector(".content-right");
-let index = 0;
-function typing() {
-  var content = contentRight.innerHTML;
-  // remove last character
-  content = content.substr(0, content.length - 1);
-  if (index < text.length) {
-    content += text.charAt(index);
-    content += "█";
-    contentRight.innerHTML = content;
-    index++;
-    setTimeout(typing, 10);
-  }
-}
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   setTimeout(function () {
     document.body.classList.remove("loading");
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".content-not-ready").style.display = "block";
-    typing();
+    document.getElementById("preloading-bg-imgs").innerHTML = "";
   }, 4000);
 });
 
