@@ -78,17 +78,17 @@ project_data.forEach((project) => {
   <div class="project-links">
       ${
         project.link.github
-          ? `<a href="${project.link.github}" class="project-link">Github</a>`
+          ? `<a href="${project.link.github}" class="project-link" alt="Github Link of Project : ${project.title}">Github</a>`
           : ""
       }
       ${
         project.link.youtube
-          ? `<a href="${project.link.youtube}" class="project-link">Youtube</a>`
+          ? `<a href="${project.link.youtube}" class="project-link" alt="Youtube video link of Project : ${project.title}">Youtube</a>`
           : ""
       }
       ${
         project.link.live
-          ? `<a href="${project.link.website}" class="project-link">Live</a>`
+          ? `<a href="${project.link.website}" class="project-link" alt="Live Deployment link of Project : ${project.title}">Live</a>`
           : ""
       }
   </div></div>`;

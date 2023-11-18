@@ -19,7 +19,7 @@ const project_data = [
       "Azure AI",
       "Nginx",
     ],
-    image: "images/projects/bhashamotion.png",
+    image: "images/projects/bhashamotion.webp",
     link: {
       github: "https://github.com/Abro0058T/Pixel",
     },
@@ -31,7 +31,7 @@ const project_data = [
     description:
       "A web application to host and organize coding contests. The web application will be capable of judging the code and generating leaderboards (similar to CodeChef/HackerRank)",
     techStacks: ["ReactJS", "FastAPI", "SQLite", "Docker", "Nginx"],
-    image: "images/projects/codedev.png",
+    image: "images/projects/codedev.webp",
     link: {
       github: "https://github.com/AshishKingdom/CodeDev",
     },
@@ -43,7 +43,7 @@ const project_data = [
     description:
       "A machine learning model based on CNN which can classify facial emotion/expression like sadness, happiness, anger, etc. The model is integrated with OpenCV to give real-time result.",
     techStacks: ["Python", "Deep Learning", "CNN", "Keras", "OpenCV"],
-    image: "images/projects/facial_emotion_detection.png",
+    image: "images/projects/facial_emotion_detection.webp",
     link: {
       github: "https://github.com/AshishKingdom/Facial-Emotion-Detection",
     },
@@ -55,7 +55,7 @@ const project_data = [
     description:
       "A REST API service which convert 20+ Indian regional text into audio using Azure AI services supporting various narration styles and vocal speed.",
     techStacks: ["Python", "FastAPI", "Azure AI", "Docker"],
-    image: "images/projects/text_to_audio.png",
+    image: "images/projects/text_to_audio.webp",
     link: {
       github: "https://github.com/AshishKingdom/text-to-audio",
       live: "https://text-to-audio.ashishkingdom.live/docs",
@@ -76,7 +76,7 @@ const project_data = [
       "JavaScript",
       "Docker",
     ],
-    image: "images/projects/heart_stroke_prediction_app.png",
+    image: "images/projects/heart_stroke_prediction_app.webp",
     link: {
       github: "https://github.com/AshishKingdom/Heart-Stroke-Prediction",
     },
@@ -88,7 +88,7 @@ const project_data = [
     description:
       "A LLM API service which was trained on 8000+ amazon products data to help user find the best product according to their needs. This project was made for Amazon Hackon Season 3 and was in top 50 out of 50K registrations.",
     techStacks: ["Python", "EmbedChain", "OpenAI", "FastAPI", "Docker"],
-    image: "images/projects/amazon_amy.png",
+    image: "images/projects/amazon_amy.webp",
     link: {
       github: "https://github.com/AshishKingdom/amazon_hackon_amy_backend",
     },
