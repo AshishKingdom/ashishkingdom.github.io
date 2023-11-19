@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".content-not-ready").style.display = "block";
     document.getElementById("preloading-bg-imgs").innerHTML = "";
-  }, 4000);
+  }, 1000);
 });
 
 // handling of project menu click
