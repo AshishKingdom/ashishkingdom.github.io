@@ -8,7 +8,7 @@ const timeline_data = [
     timeRange: "NOV 2023 - PRESENT",
     title: "Backend Developer @ BaSe Software Solutions",
     description:
-      "Delivering highly scalable backend systems for various clients<br>Working on technologies like FastAPI, Flask, Django, PostgreSQL<br>Designing complex database schemas for various clients",
+      "Delivering highly scalable backend systems<br>Working on technologies like FastAPI, Flask, Django, PostgreSQL<br>Designing complex database schemas for various business use cases",
   },
   {
     timeRange: "SEP 2023 - PRESENT",
