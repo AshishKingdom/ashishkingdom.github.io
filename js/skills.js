@@ -10,14 +10,14 @@ const skills_data = [
   },
   {
     category: "Frameworks",
-    data: "Flask, FastAPI, embedchain, p5.js, ReactJS, ExpressJS",
+    data: "Flask, FastAPI, embedchain, p5.js, ReactJS, ExpressJS, Celery",
   },
   {
     category: "Databases",
-    data: "SQLite, MongoDB, MySQL",
+    data: "SQLite, PostgreSQL, MySQL, MongoDB, Redis, MindsDB",
   },
   {
     category: "Tools",
-    data: "Git, GitHub, Postman, Docker, Nginx",
+    data: "Git, Github, Postman, AWS, Docker, Nginx",
   },
 ];

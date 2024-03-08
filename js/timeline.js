@@ -5,7 +5,14 @@
 */
 const timeline_data = [
   {
-    timeRange: "NOV 2023 - PRESENT",
+    timeRange: "FEB 2024 - PRESENT",
+    title: "SDE Intern @ The Mango Jelly",
+    description:
+      "Working on NLP service to develop features related to TheMangoJelly’s AI Copilot which will be used by brands for marketing-related queries<br>Integrating various LLM models with tools like Google Analytics, Google Search Console, etc into their NLP service and creating their APIs as well",
+  },
+
+  {
+    timeRange: "NOV 2023 - JAN 2023",
     title: "Backend Developer @ BaSe Software Solutions",
     description:
       "Delivering highly scalable backend systems<br>Working on technologies like FastAPI, Flask, Django, PostgreSQL<br>Designing complex database schemas for various business use cases",
