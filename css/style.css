@@ -69,7 +69,6 @@ a.link {
 
 /* navbar inside landing screen */
 .navbar {
-  position: relative;
   height: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -80,6 +79,7 @@ a.link {
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
 }
+
 .navbar-item {
   margin: 0 20px;
   font-size: 1.75rem;
@@ -625,4 +625,27 @@ span.skill-category {
     padding: 25px;
     text-align: center;
   }
+}
+
+/* console font */
+.hidden {
+  opacity:0;
+}
+.console-container { 
+  font-size:2em;
+  text-align:center;
+  height:100px;
+  width:100%;
+  display:block;
+  position:relative;
+  color:white;
+  bottom:0vh;
+  left:0;
+  right:0;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
 }
