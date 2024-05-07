@@ -5,7 +5,7 @@
 */
 const timeline_data = [
   {
-    timeRange: "FEB 2024 - PRESENT",
+    timeRange: "FEB 2024 - APR 2024",
     title: "SDE Intern @ The Mango Jelly",
     description:
       "Working on NLP service to develop features related to TheMangoJelly’s AI Copilot which will be used by brands for marketing-related queries<br>Integrating various LLM models with tools like Google Analytics, Google Search Console, etc into their NLP service and creating their APIs as well",
