@@ -153,3 +153,10 @@ document
     }
   });
 
+window.addEventListener("scroll", (event) => {
+    if (window.scrollY > window.visualViewport.height) {
+      document.querySelector(".sticky-nav").classList.add("show-nav")
+    } else {
+      document.querySelector(".sticky-nav").classList.remove("show-nav");
+    }
+  });
