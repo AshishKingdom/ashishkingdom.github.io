@@ -1,6 +1,6 @@
 /*
     @Author: Ashish Kuswaha
-    @Last Modified: 13/11/2023
+    @Last Modified: 19/07/2024
     @Description: This file is used for storing skills data.
 */
 const skills_data = [
@@ -10,11 +10,11 @@ const skills_data = [
   },
   {
     category: "Frameworks",
-    data: "Flask, FastAPI, embedchain, p5.js, ReactJS, ExpressJS, Celery",
+    data: "Flask, FastAPI, LlamaIndex, p5.js, ReactJS, ExpressJS, Celery",
   },
   {
     category: "Databases",
-    data: "SQLite, PostgreSQL, MySQL, MongoDB, Redis, MindsDB",
+    data: "SQLite, PostgreSQL, MySQL, MongoDB, Redis, MindsDB, ChromaDB",
   },
   {
     category: "Tools",

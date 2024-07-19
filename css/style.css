@@ -675,3 +675,17 @@ span.skill-category {
   top:-0.14em;
   left:10px;
 }
+
+/* company logos animation */
+.company-logos {
+  animation: infinite-scroll-right-to-left 15s linear infinite;
+}
+
+@keyframes infinite-scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

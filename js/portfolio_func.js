@@ -26,6 +26,11 @@ timeline_data.forEach((timeline) => {
     temp_data += `<div class="timeline-block timeline-block-right">
     <div class="marker"></div>
     <div class="timeline-content">
+    `;
+    if (timeline.website!=undefined) {
+      temp_data += `<a href="${timeline.website}" target="_blank"><img src="${timeline.logoUrl}" alt="${timeline.title}" /></a>`;
+    }
+    temp_data += `
       <h3>${timeline.timeRange}</h3>
       <span>${timeline.title}</span>
       <p>
@@ -36,7 +41,11 @@ timeline_data.forEach((timeline) => {
   } else {
     temp_data += `<div class="timeline-block timeline-block-left">
     <div class="marker"></div>
-    <div class="timeline-content">
+    <div class="timeline-content">`
+    if (timeline.website!=undefined) {
+      temp_data += `<a href="${timeline.website}" target="_blank"><img src="${timeline.logoUrl}" alt="${timeline.title}" /></a>`;
+    }
+    temp_data += `
       <h3>${timeline.timeRange}</h3>
       <span>${timeline.title}</span>
       <p>
