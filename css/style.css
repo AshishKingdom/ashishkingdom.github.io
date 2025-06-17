@@ -188,6 +188,7 @@ span.skill-category {
 .marquee {
   overflow: hidden;
   padding: 20px;
+  width: 95vw;
 }
 .marquee-content {
   display: flex;
