@@ -6,7 +6,15 @@
 
 const timeline_data = [
   {
-    timeRange: "AUG 2024 - PRESENT",
+    timeRange: "JUN 2025 - PRESENT",
+    title: "Founding AI Engineer @ WeyaAI",
+    logoUrl: "images/weyaai.png",
+    website: "https://weya.ai/",
+    description:
+      "Leading the development of AI agent products at WeyaAI<br> Designing and implementing advanced AI workflows for various applications<br> Focusing on improving AI agent performance, latency, and user experience."
+  },
+  {
+    timeRange: "AUG 2024 - MAY 2025",
     title: "GenAI Engineer @ WeyaAI",
     logoUrl: "images/weyaai.png",
     website: "https://weya.ai/",
@@ -14,7 +22,7 @@ const timeline_data = [
       "Working on Voice AI agent product ”Vocalyst” which can automate customer service call,support calls, etc <br> Designing the agent workflow and working on audio analysis <br> Working to improve AI agent latency, intelligence, and natural sound."
   },
   {
-    timeRange:"JUN 2024 - JULY 2024",
+    timeRange: "JUN 2024 - JULY 2024",
     title: "Project Associate @ KareAI Inc.",
     logoUrl: "images/kareai_white_logo.png",
     website: "https://kareai.io",
