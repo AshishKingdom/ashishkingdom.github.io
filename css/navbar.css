@@ -1,0 +1,257 @@
+/* Navbar - Liquid Glass/Glossy Effect with White Theme */
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+    padding: 0;
+}
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+
+    /* Liquid glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+
+    /* Glossy borders */
+    border: 1px solid rgba(200, 200, 255, 0.339);
+    border-radius: 50px;
+
+    /* Premium shadows */
+    box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Brand/Logo */
+.navbar-brand {
+    flex-shrink: 0;
+}
+
+.brand-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: -0.5px;
+}
+
+.brand-link:hover {
+    color: #4a5568;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Desktop Menu - Show on desktop, hide on mobile */
+.navbar-menu-desktop {
+    display: flex;
+}
+
+/* Mobile Menu - Hide on desktop, show on mobile */
+.navbar-menu-mobile {
+    display: none;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 550;
+    font-family: sans-serif;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    color: #1a202c;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Coffee Icon */
+.nav-coffee {
+    padding: 10px 12px;
+    min-width: 44px;
+}
+
+/* Highlighted Resume Button */
+.nav-highlight {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-highlight:hover {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.mobile-toggle:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.mobile-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #2d3748;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        top: 12px;
+        width: 95%;
+    }
+
+    .navbar-container {
+        padding: 10px 16px;
+    }
+
+    .brand-link {
+        font-size: 1.1rem;
+    }
+
+    /* Hide desktop menu */
+    .navbar-menu-desktop {
+        display: none;
+    }
+
+    /* Show mobile menu */
+    .navbar-menu-mobile {
+        display: flex;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px;
+
+        /* Liquid glass effect - matching navbar-container */
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px) saturate(180%);
+        -webkit-backdrop-filter: blur(10px) saturate(180%);
+
+        /* Glossy borders - matching navbar-container */
+        border: 1px solid rgba(200, 200, 255, 0.339);
+        border-radius: 24px;
+
+        /* Premium shadows - matching navbar-container */
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.08),
+            0 2px 8px rgba(0, 0, 0, 0.04),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+
+        /* Hide by default with scale and opacity */
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+        pointer-events: none;
+
+        /* Smooth transition animation */
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar-menu-mobile.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+
+    /* Row for Coffee and Resume */
+    .nav-row {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-row .nav-item {
+        flex: 1;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .navbar-menu-mobile>.nav-item {
+        width: 100%;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 96%;
+    }
+
+    .brand-link {
+        font-size: 1rem;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}

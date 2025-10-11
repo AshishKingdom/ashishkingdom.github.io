@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Component Preview - Black & White Theme</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+        integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+        crossorigin="anonymous"></script>
+    <style>
+        /* Additional preview-specific styles */
+        .preview-section {
+            margin-bottom: var(--spacing-3xl);
+            padding: var(--spacing-xl);
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: var(--radius-lg);
+        }
+
+        .preview-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--color-black-light);
+        }
+
+        .component-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--glass-border);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Component -->
+    <div hx-get="components/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    <!-- Main Content -->
+    <div class="section-container" style="padding-top: 120px;">
+
+        <!-- Header -->
+        <div class="section-header fade-in">
+            <h1 class="section-title">UI Component Library</h1>
+            <p class="section-subtitle">Preview of all available components with Black & White theme and liquid glass
+                effects</p>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="preview-section slide-up">
+            <h2 class="preview-title">🎨 Color Palette</h2>
+            <div class="component-row">
+                <div class="color-swatch" style="background: var(--color-black); color: white;">Black<br>#000000</div>
+                <div class="color-swatch" style="background: var(--color-black-light); color: white;">Black
+                    Light<br>#1a1a1a</div>
+                <div class="color-swatch" style="background: var(--color-black-lighter); color: white;">Black
+                    Lighter<br>#2d2d2d</div>
+                <div class="color-swatch" style="background: var(--color-gray-dark); color: white;">Gray Dark<br>#2d3748
+                </div>
+                <div class="color-swatch" style="background: var(--color-gray); color: white;">Gray<br>#4a5568</div>
+                <div class="color-swatch" style="background: var(--color-gray-light); color: white;">Gray
+                    Light<br>#718096</div>
+                <div class="color-swatch" style="background: var(--color-white); border: 2px solid #000;">
+                    White<br>#ffffff</div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="preview-section">
+            <h2 class="preview-title">📝 Typography</h2>
+            <h1>Heading 1 - The Quick Brown Fox</h1>
+            <h2>Heading 2 - The Quick Brown Fox</h2>
+            <h3>Heading 3 - The Quick Brown Fox</h3>
+            <h4>Heading 4 - The Quick Brown Fox</h4>
+            <h5>Heading 5 - The Quick Brown Fox</h5>
+            <h6>Heading 6 - The Quick Brown Fox</h6>
+            <p class="text-large">Large text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Regular text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.</p>
+            <p class="text-small">Small text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="text-xs">Extra small text: Lorem ipsum dolor sit amet.</p>
+            <p class="text-mono">Monospace text: &lt;/AshishKingdom&gt;</p>
+            <p class="text-muted">Muted text: This is less important information.</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="preview-section">
+            <h2 class="preview-title">🔘 Buttons</h2>
+
+            <div class="mb-lg">
+                <h4>Primary Buttons</h4>
+                <div class="component-row">
+                    <button class="btn btn-primary btn-sm">Small Primary</button>
+                    <button class="btn btn-primary">Regular Primary</button>
+                    <button class="btn btn-primary btn-lg">Large Primary</button>
+                    <button class="btn btn-primary" disabled>Disabled Primary</button>
+                </div>
+            </div>
+
+            <div class="mb-lg">
+                <h4>Secondary Buttons</h4>
+                <div class="component-row">
+                    <button class="btn btn-secondary btn-sm">Small Secondary</button>
+                    <button class="btn btn-secondary">Regular Secondary</button>
+                    <button class="btn btn-secondary btn-lg">Large Secondary</button>
+                    <button class="btn btn-secondary" disabled>Disabled Secondary</button>
+                </div>
+            </div>
+
+            <div class="mb-lg">
+                <h4>Outline Buttons</h4>
+                <div class="component-row">
+                    <button class="btn btn-outline btn-sm">Small Outline</button>
+                    <button class="btn btn-outline">Regular Outline</button>
+                    <button class="btn btn-outline btn-lg">Large Outline</button>
+                    <button class="btn btn-outline" disabled>Disabled Outline</button>
+                </div>
+            </div>
+
+            <div class="mb-lg">
+                <h4>Icon Buttons</h4>
+                <div class="component-row">
+                    <button class="btn btn-primary btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline btn-icon">❤️</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="preview-section">
+            <h2 class="preview-title">🔗 Links</h2>
+            <div class="component-row flex-col" style="align-items: flex-start;">
+                <a href="#">Regular link</a>
+                <a href="#" class="link-underline">Underlined link</a>
+                <a href="#" class="text-bold">Bold link</a>
+            </div>
+        </div>
+
+        <!-- Glass Container -->
+        <div class="preview-section">
+            <h2 class="preview-title">✨ Glass Container</h2>
+            <div class="glass-container" style="padding: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                <h3>Glass Container - Standard</h3>
+                <p>This container has the liquid glass effect with backdrop blur and subtle borders. Hover over it to
+                    see the enhanced shadow effect.</p>
+            </div>
+            <div class="glass-container glass-container-rounded" style="padding: var(--spacing-lg);">
+                <h3>Glass Container - Rounded</h3>
+                <p>This container has the same glass effect but with fully rounded corners (pill shape).</p>
+            </div>
+        </div>
+
+        <!-- Input Fields -->
+        <div class="preview-section">
+            <h2 class="preview-title">📥 Input Fields</h2>
+
+            <div class="input-group">
+                <label class="input-label">Regular Input</label>
+                <input type="text" class="input" placeholder="Enter your name">
+                <span class="input-hint">This is a helpful hint text</span>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Small Input</label>
+                <input type="email" class="input input-sm" placeholder="email@example.com">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Large Input</label>
+                <input type="text" class="input input-lg" placeholder="Large input field">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Textarea</label>
+                <textarea class="textarea" placeholder="Write your message here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="preview-section">
+            <h2 class="preview-title">🎴 Cards</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Card Title</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>This is a basic card with header, body, and footer. Cards have glass effect and lift on
+                            hover.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-sm">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Project Card</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>AI-powered document processor with natural language understanding capabilities.</p>
+                        <div class="flex flex-gap-sm mt-md">
+                            <span class="badge">AI</span>
+                            <span class="badge">Python</span>
+                            <span class="badge">ML</span>
+                        </div>
+                    </div>
+                    <div class="card-footer flex flex-between">
+                        <span class="text-small text-muted">2024</span>
+                        <a href="#" class="btn btn-outline btn-sm">View</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Simple Card</h3>
+                    <p>Cards can be used without headers or footers. They're versatile containers for any content.</p>
+                    <div class="mt-md">
+                        <span class="badge badge-black">Featured</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges & Highlights -->
+        <div class="preview-section">
+            <h2 class="preview-title">🏷️ Badges & Highlights</h2>
+
+            <div class="mb-lg">
+                <h4>Badges</h4>
+                <div class="component-row">
+                    <span class="badge">Default Badge</span>
+                    <span class="badge badge-black">Black Badge</span>
+                    <span class="badge badge-outline">Outline Badge</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Highlights</h4>
+                <p>This is a paragraph with <span class="highlight">highlighted text</span> that draws attention to
+                    important information.</p>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="preview-section">
+            <h2 class="preview-title">📅 Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <h3 class="timeline-title">Senior Software Engineer</h3>
+                    <div class="timeline-content">
+                        <p>Leading AI agent development and building scalable backend systems. Working with cutting-edge
+                            technologies to deliver innovative solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <h3 class="timeline-title">Software Engineer</h3>
+                    <div class="timeline-content">
+                        <p>Developed full-stack applications and contributed to microservices architecture. Improved
+                            system performance by 40%.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <h3 class="timeline-title">Junior Developer</h3>
+                    <div class="timeline-content">
+                        <p>Started career in software development, learning modern web technologies and best practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid System -->
+        <div class="preview-section">
+            <h2 class="preview-title">📐 Grid System</h2>
+
+            <h4 class="mb-md">2 Column Grid</h4>
+            <div class="grid grid-2 mb-lg">
+                <div class="glass-container" style="padding: var(--spacing-lg);">
+                    <h4>Column 1</h4>
+                    <p>Responsive grid that adapts to screen size.</p>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-lg);">
+                    <h4>Column 2</h4>
+                    <p>Automatically wraps on smaller screens.</p>
+                </div>
+            </div>
+
+            <h4 class="mb-md">3 Column Grid</h4>
+            <div class="grid grid-3 mb-lg">
+                <div class="glass-container" style="padding: var(--spacing-lg);">
+                    <h4>Column 1</h4>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-lg);">
+                    <h4>Column 2</h4>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-lg);">
+                    <h4>Column 3</h4>
+                </div>
+            </div>
+
+            <h4 class="mb-md">4 Column Grid</h4>
+            <div class="grid grid-4">
+                <div class="glass-container" style="padding: var(--spacing-md); text-align: center;">
+                    <h5>1</h5>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-md); text-align: center;">
+                    <h5>2</h5>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-md); text-align: center;">
+                    <h5>3</h5>
+                </div>
+                <div class="glass-container" style="padding: var(--spacing-md); text-align: center;">
+                    <h5>4</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flex Utilities -->
+        <div class="preview-section">
+            <h2 class="preview-title">🔄 Flex Utilities</h2>
+
+            <h4 class="mb-md">Flex Center</h4>
+            <div class="glass-container flex flex-center"
+                style="padding: var(--spacing-lg); height: 100px; margin-bottom: var(--spacing-md);">
+                <p>Centered content</p>
+            </div>
+
+            <h4 class="mb-md">Flex Between</h4>
+            <div class="glass-container flex flex-between"
+                style="padding: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                <span>Left</span>
+                <span>Right</span>
+            </div>
+
+            <h4 class="mb-md">Flex with Gap</h4>
+            <div class="flex flex-gap-md">
+                <button class="btn btn-primary">Button 1</button>
+                <button class="btn btn-secondary">Button 2</button>
+                <button class="btn btn-outline">Button 3</button>
+            </div>
+        </div>
+
+        <!-- Section Example -->
+        <div class="preview-section">
+            <h2 class="preview-title">📄 Section Component</h2>
+            <div style="background: rgba(0,0,0,0.02); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                <code style="display: block; white-space: pre-wrap;">
+&lt;section class="section"&gt;
+    &lt;div class="section-container"&gt;
+        &lt;div class="section-header"&gt;
+            &lt;h2 class="section-title"&gt;Section Title&lt;/h2&gt;
+            &lt;p class="section-subtitle"&gt;Section subtitle text&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- Section content --&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+                </code>
+            </div>
+        </div>
+
+        <!-- Utility Classes -->
+        <div class="preview-section">
+            <h2 class="preview-title">🛠️ Utility Classes</h2>
+
+            <h4>Spacing</h4>
+            <p class="text-small text-muted">Margin and padding utilities: <code>.mt-sm</code>, <code>.mb-md</code>,
+                <code>.pt-lg</code>, <code>.pb-xl</code>, etc.</p>
+
+            <h4 class="mt-lg">Width & Alignment</h4>
+            <p class="text-small text-muted"><code>.w-full</code>, <code>.max-w-sm</code>, <code>.max-w-md</code>,
+                <code>.max-w-lg</code>, <code>.mx-auto</code></p>
+
+            <h4 class="mt-lg">Shadows</h4>
+            <div class="component-row mt-md">
+                <div class="shadow-sm"
+                    style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md);">
+                    <p class="text-small">Shadow Small</p>
+                </div>
+                <div class="shadow-md"
+                    style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md);">
+                    <p class="text-small">Shadow Medium</p>
+                </div>
+                <div class="shadow-lg"
+                    style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md);">
+                    <p class="text-small">Shadow Large</p>
+                </div>
+            </div>
+
+            <h4 class="mt-lg">Border Radius</h4>
+            <div class="component-row mt-md">
+                <div class="rounded"
+                    style="padding: var(--spacing-md); background: var(--color-black-light); color: white;">
+                    <p class="text-small">Rounded</p>
+                </div>
+                <div class="rounded-lg"
+                    style="padding: var(--spacing-md); background: var(--color-black-light); color: white;">
+                    <p class="text-small">Rounded Large</p>
+                </div>
+                <div class="rounded-full"
+                    style="padding: var(--spacing-md) var(--spacing-xl); background: var(--color-black-light); color: white;">
+                    <p class="text-small">Rounded Full</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="preview-section">
+            <h2 class="preview-title">➖ Divider</h2>
+            <p>Content above divider</p>
+            <div class="divider"></div>
+            <p>Content below divider</p>
+        </div>
+
+        <!-- Animations -->
+        <div class="preview-section">
+            <h2 class="preview-title">🎬 Animations</h2>
+            <div class="component-row">
+                <div class="card fade-in" style="max-width: 300px;">
+                    <h4>Fade In</h4>
+                    <p class="text-small">Uses <code>.fade-in</code> class</p>
+                </div>
+                <div class="card slide-up" style="max-width: 300px;">
+                    <h4>Slide Up</h4>
+                    <p class="text-small">Uses <code>.slide-up</code> class</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-section-title">About</h3>
+                    <p class="text-small">This is a preview of all UI components available in the common.css design
+                        system.</p>
+                </div>
+                <div>
+                    <h3 class="footer-section-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-section-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-section-title">Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AshishKingdom. Black & White Theme • Liquid Glass Design System</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
