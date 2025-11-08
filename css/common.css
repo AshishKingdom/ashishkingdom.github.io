@@ -148,6 +148,13 @@ p {
     color: var(--color-gray-light);
 }
 
+.text-special {
+    /* dotted underline for special text */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+}
+
 /* ============================================
    GLASS CONTAINER (Reusable Glass Effect)
    ============================================ */
@@ -434,6 +441,13 @@ a:hover {
     margin: 0 auto;
 }
 
+.preview-title {
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-black-light);
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -605,7 +619,7 @@ a:hover {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top: 4px;
     bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom,
@@ -621,14 +635,14 @@ a:hover {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: calc(-1 * var(--spacing-xl) - 6px);
+    left: calc(-1 * var(--spacing-xl) - 8px);
     top: 4px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background: var(--color-white);
     border: 3px solid var(--color-black-light);
-    box-shadow: 0 0 0 4px var(--color-white);
+    box-shadow: 0 0 4px 4px var(--color-black-light);
 }
 
 .timeline-date {
@@ -649,7 +663,7 @@ a:hover {
 }
 
 /* ============================================
-   GRID SYSTEM
+    GRID SYSTEM
    ============================================ */
 .grid {
     display: grid;
