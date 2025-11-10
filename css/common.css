@@ -67,9 +67,15 @@ body {
     font-family: var(--font-sans);
     color: var(--color-black-light);
     background-color: var(--color-white);
+    /* background: url('../images/julia_set_light.webp') left top/cover no-repeat; */
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.fractal-background {
+    /* need to have a fractal background image, sideways running in this container, repeating with flip */
+    background: url('../images/julia_set_light.webp') left top/cover repeat;
 }
 
 /* ============================================
@@ -613,6 +619,8 @@ a:hover {
 .timeline {
     position: relative;
     padding-left: var(--spacing-xl);
+    /* background: url('../images/julia_set_light.webp') left center/cover no-repeat; */
+
 }
 
 .timeline::before {
