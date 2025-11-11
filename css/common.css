@@ -78,6 +78,12 @@ body {
     background: url('../images/julia_set_light.webp') left top/cover repeat;
 }
 
+@media (max-width: 768px) {
+    .fractal-background {
+        background: url('../images/julia_set_light.webp') center top/cover repeat;
+    }
+}
+
 /* ============================================
    TYPOGRAPHY
    ============================================ */
@@ -619,22 +625,37 @@ a:hover {
 .timeline {
     position: relative;
     padding-left: var(--spacing-xl);
+    list-style-type: disc;
     /* background: url('../images/julia_set_light.webp') left center/cover no-repeat; */
-
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 4px;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom,
-            var(--color-black-light) 0%,
-            var(--color-gray-light) 100%);
+/* Outer list items (years) */
+.timeline>li {
+    position: relative;
+    padding-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
 }
 
+/* Inner nested lists (details) */
+.timeline>li>ul {
+    list-style-type: circle;
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+    margin-left: var(--spacing-lg);
+    padding-left: var(--spacing-md);
+}
+
+.timeline>li>ul>li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+/* Keep old classes for backward compatibility */
 .timeline-item {
     position: relative;
     padding-bottom: var(--spacing-xl);
