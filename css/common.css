@@ -814,11 +814,16 @@ a:hover {
 /* ============================================
    FOOTER
    ============================================ */
+.footer-background {
+    background: url('../images/footer_bg.webp') top;
+}
+
 .footer {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border-top: 1px solid var(--glass-border);
+    /* background: url('images/footer_bg.webp') top; */
+    margin-top: 100px;
+    backdrop-filter: brightness(130%);
+    -webkit-backdrop-filter: brightness(130%);
+    /* border-top: 1px solid var(--glass-border); */
     padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
@@ -860,7 +865,7 @@ a:hover {
 
 .footer-bottom {
     padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--glass-border);
+    /* border-top: 1px solid var(--glass-border); */
     text-align: center;
     color: var(--color-gray);
     font-size: 0.875rem;
