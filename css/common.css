@@ -128,7 +128,7 @@ h6 {
 
 p {
     margin-bottom: var(--spacing-md);
-    color: var(--color-gray-dark);
+    color: var(--color-black);
 }
 
 .text-large {
@@ -814,15 +814,31 @@ a:hover {
 /* ============================================
    FOOTER
    ============================================ */
-.footer-background {
+/* .footer-background {
     background: url('../images/footer_bg.webp') top;
+} */
+
+hr {
+    border: 0;
+    margin: 1.35em auto;
+    max-width: 100%;
+    background-position: 50%;
+    box-sizing: border-box;
+}
+
+.dots {
+    color: var(--color-gray-dark);
+    border-width: 0 0 8px;
+    margin-top: 100px;
+    border-style: solid;
+    border-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"%3E%3Ccircle fill="%23CCC" cx="1" cy="0.5" r="0.5"/%3E%3C/svg%3E') 0 0 100% repeat;
+    width: 216px;
 }
 
 .footer {
     /* background: url('images/footer_bg.webp') top; */
-    margin-top: 100px;
-    backdrop-filter: brightness(130%);
-    -webkit-backdrop-filter: brightness(130%);
+    margin-top: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%), url('../images/footer_bg.webp') top;
     /* border-top: 1px solid var(--glass-border); */
     padding: var(--spacing-2xl) var(--spacing-lg);
 }
@@ -854,7 +870,7 @@ a:hover {
 }
 
 .footer-links a {
-    color: var(--color-gray-dark);
+    color: var(--color-black);
     transition: var(--transition-base);
 }
 
@@ -865,9 +881,8 @@ a:hover {
 
 .footer-bottom {
     padding-top: var(--spacing-lg);
-    /* border-top: 1px solid var(--glass-border); */
     text-align: center;
-    color: var(--color-gray);
+    color: var(--color-black);
     font-size: 0.875rem;
 }
 
