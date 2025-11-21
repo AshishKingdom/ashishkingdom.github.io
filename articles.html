@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Ashish's Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+        integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/bb50c14ef6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .content-not-ready {
+            display: none;
+        }
+
+        body.loading {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #fff;
+            height: 100vh;
+        }
+
+        @keyframes ldio-0chhxaqs32b9 {
+            0% {
+                background: #eee;
+            }
+
+            12.5% {
+                background: #aaa;
+            }
+
+            12.625% {
+                background: #888;
+            }
+
+            100% {
+                background: #555;
+            }
+        }
+
+        .ldio-0chhxaqs32b9 div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #aaa;
+            animation: ldio-0chhxaqs32b9 1s linear infinite;
+        }
+
+        .loadingio-spinner-blocks-f6re9kg8ubs {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .ldio-0chhxaqs32b9 {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateZ(0) scale(1);
+            backface-visibility: hidden;
+            transform-origin: 0 0;
+        }
+
+        .ldio-0chhxaqs32b9 div {
+            box-sizing: content-box;
+        }
+
+        /* Articles Specific Styles */
+        .articles-section {
+            min-height: 80vh;
+            padding-top: calc(100px + var(--spacing-xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .articles-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .articles-header {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .articles-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--color-black-light);
+            margin-left: var(--spacing-sm);
+        }
+
+        /* List-based design matching timeline */
+        .articles-list {
+            list-style-type: disc;
+            padding-left: var(--spacing-xl);
+            margin-left: var(--spacing-sm);
+        }
+
+        .articles-list>li {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            padding-left: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .articles-list>li::marker {
+            color: var(--color-black-light);
+        }
+
+        .article-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: var(--transition-base);
+        }
+
+        .article-link:hover .article-title {
+            color: var(--color-gray);
+        }
+
+        .article-header {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .article-title {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-gray-dark);
+            margin: 0;
+            transition: var(--transition-base);
+            display: inline;
+        }
+
+        .article-date {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--color-gray);
+            margin-left: var(--spacing-sm);
+        }
+
+        .article-tags {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin-left: var(--spacing-sm);
+        }
+
+        .article-tag {
+            display: inline-block;
+            padding: 0px 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.06);
+            color: var(--color-gray);
+            border: none;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.3;
+        }
+
+        .empty-state-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-black-light);
+        }
+
+        .empty-state-message {
+            font-size: 1.25rem;
+            color: var(--color-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .articles-section {
+                padding-top: calc(80px + var(--spacing-md));
+            }
+
+            .article-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-xs);
+            }
+
+            .article-title {
+                font-size: 1.125rem;
+            }
+
+            .article-date {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div class="loader">
+        <div class="loadingio-spinner-blocks-f6re9kg8ubs">
+            <div class="ldio-0chhxaqs32b9">
+                <div style="left: 68px; top: 68px; animation-delay: 0s"></div>
+                <div style="left: 90px; top: 68px; animation-delay: 0.125s"></div>
+                <div style="left: 112px; top: 68px; animation-delay: 0.25s"></div>
+                <div style="left: 68px; top: 90px; animation-delay: 0.875s"></div>
+                <div style="left: 112px; top: 90px; animation-delay: 0.375s"></div>
+                <div style="left: 68px; top: 112px; animation-delay: 0.75s"></div>
+                <div style="left: 90px; top: 112px; animation-delay: 0.625s"></div>
+                <div style="left: 112px; top: 112px; animation-delay: 0.5s"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="content-not-ready">
+            <!-- Navbar Component -->
+            <div hx-get="components/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+            <!-- Articles Section -->
+            
+            <section class="articles-section section">
+                <div class="articles-container">
+                    <div class="articles-header">
+                        <h1 class="articles-title">Articles</h1>
+                    </div>
+
+                    <!-- Articles will be rendered here by JavaScript -->
+                    <div id="articles-list"></div>
+                </div>
+            </section>
+
+            <hr class="dots" />
+
+            <!-- Footer -->
+            <div hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    document.body.classList.remove("loading");
+                    document.querySelector(".loader").style.display = "none";
+                    document.querySelector(".content-not-ready").style.display = "block";
+
+                    // Initialize articles rendering
+                    renderArticles();
+                }, 1000);
+            });
+        </script>
+        <script src="js/articles.js"></script>
+</body>
+
+</html>
