@@ -1,437 +1,191 @@
-<!--
-  @Author: Ashish Kushwaha (AshishKingdom)
-  @Last Modified:   08/05/202
-  @Description: This is the main file for the portfolio website.
--->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Ashish Kushwaha is a Backend Developer, Frontend Developer, AI/ML, ReactJS, FastAPI, Flask"
-    />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ashishkingdom.live/" />
-    <meta
-      property="og:title"
-      content="Ashish's Portfolio | Backend Developer, Frontend Developer, AI/ML, ReactJS, FastAPI, Flask"
-    />
-    <meta
-      property="og:description"
-      content="Ashish Kushwaha is a Backend Developer, Frontend Developer, AI/ML, ReactJS, FastAPI, Flask"
-    />
-    <meta
-      property="og:image"
-      content="https://ashishkingdom.live/images/og_image.png"
-    />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ashishkingdom.live/" />
-    <meta
-      property="twitter:title"
-      content="Ashish's Portfolio | Backend Developer, Frontend Developer, AI/ML, ReactJS, FastAPI, Flask"
-    />
-    <meta
-      property="twitter:description"
-      content="Ashish Kushwaha is a Backend Developer, Frontend Developer, AI/ML, ReactJS, FastAPI, Flask"
-    />
-    <meta
-      property="twitter:image"
-      content="https://ashishkingdom.live/images/og_image.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="keywords"
-      content="Ashish Kushwaha, Ashish, Kushwaha, AshishKingdom, Ashish Kingdom, Ashish Kushwaha Portfolio, Ashish Kushwaha Backend Developer, Ashish Kushwaha Frontend Developer, Ashish Kushwaha AI/ML, Ashish Kushwaha ReactJS, Ashish Kushwaha FastAPI, Ashish Kushwaha Flask"
-    />
-    <meta name="author" content="Ashish Kushwaha" />
-    <meta name="robots" content="index, follow" />
+  <!-- Primary Meta Tags -->
+  <title>Ashish Kushwaha | AI Engineer, Backend Developer, Software Engineer</title>
+  <meta name="title" content="Ashish Kushwaha | AI Engineer, Backend Developer, Software Engineer" />
+  <meta name="description"
+    content="Ashish Kushwaha (AshishKingdom) - Founding AI Engineer specializing in AI agents, backend development, and infrastructure. Expert in LLMs, RAG systems, voice AI, and real-time telephony services." />
+  <meta name="keywords"
+    content="Ashish Kushwaha, AshishKingdom, AI Engineer, Backend Developer, Software Engineer, AI Agents, LLM, RAG, Voice AI, OpenAI, Gemini, Anthropic, Machine Learning, weya.ai" />
+  <meta name="author" content="Ashish Kushwaha" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ashishkingdom.tech" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico" />
 
-    <link rel="icon" href="images/icon.ico" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashishkingdom.tech" />
+  <meta property="og:title" content="Ashish Kushwaha | AI Engineer, Backend Developer, Software Engineer" />
+  <meta property="og:description"
+    content="Founding AI Engineer specializing in AI agents, backend development, and infrastructure. Expert in LLMs, RAG systems, voice AI, and real-time telephony services." />
+  <meta property="og:image" content="https://ashishkingdom.tech/images/portfolio_v3.webp" />
+  <meta property="og:site_name" content="Ashish Kushwaha" />
+  <meta property="og:locale" content="en_US" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>
-      Ashish's Portfolio | Backend Developer, Frontend Developer, AI/ML,
-      ReactJS, FastAPI, Flask
-    </title>
-    <style>
-      .content-not-ready {
-        display: none;
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://ashishkingdom.tech/" />
+  <meta property="twitter:title" content="Ashish Kushwaha | AI Engineer, Backend Developer, Software Engineer" />
+  <meta property="twitter:description"
+    content="Founding AI Engineer specializing in AI agents, backend development, and infrastructure. Expert in LLMs, RAG systems, voice AI, and real-time telephony services." />
+  <meta property="twitter:image" content="https://ashishkingdom.tech/images/portfolio_v3.webp" />
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+    integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/bb50c14ef6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .content-not-ready {
+      display: none;
+    }
+
+    body.loading {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #fff;
+      height: 100vh;
+    }
+
+    @keyframes ldio-0chhxaqs32b9 {
+      0% {
+        background: #eee;
       }
-      body.loading {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-        background-color: black;
-        height: 100vh;
+
+      12.5% {
+        background: #aaa;
       }
-      @keyframes ldio-0chhxaqs32b9 {
-        0% {
-          background: #00ff00;
-        }
-        12.5% {
-          background: #00ff00;
-        }
-        12.625% {
-          background: #008400;
-        }
-        100% {
-          background: #008400;
-        }
+
+      12.625% {
+        background: #888;
       }
-      .ldio-0chhxaqs32b9 div {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: #008400;
-        animation: ldio-0chhxaqs32b9 1s linear infinite;
+
+      100% {
+        background: #555;
       }
-      .loadingio-spinner-blocks-f6re9kg8ubs {
-        width: 200px;
-        height: 200px;
-        display: inline-block;
-        overflow: hidden;
-        background: black;
-      }
-      .ldio-0chhxaqs32b9 {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform: translateZ(0) scale(1);
-        backface-visibility: hidden;
-        transform-origin: 0 0; /* see note above */
-      }
-      .ldio-0chhxaqs32b9 div {
-        box-sizing: content-box;
-      }
-    </style>
-  </head>
-  <body class="loading">
-    <!-- preloading of all background images -->
-    <div style="display: none" id="preloading-bg-imgs">
-      <img src="images/bg_1.webp" />
-      <img src="images/bg_2.png" />
-      <img src="images/bg_3.webp" />
-      <img src="images/bg_4.png" />
-      <img src="images/bg_5.png" />
-      <img src="images/bg_6.png" />
-    </div>
-    <div class="loader">
-      <div class="loadingio-spinner-blocks-f6re9kg8ubs">
-        <div class="ldio-0chhxaqs32b9">
-          <div style="left: 68px; top: 68px; animation-delay: 0s"></div>
-          <div style="left: 90px; top: 68px; animation-delay: 0.125s"></div>
-          <div style="left: 112px; top: 68px; animation-delay: 0.25s"></div>
-          <div style="left: 68px; top: 90px; animation-delay: 0.875s"></div>
-          <div style="left: 112px; top: 90px; animation-delay: 0.375s"></div>
-          <div style="left: 68px; top: 112px; animation-delay: 0.75s"></div>
-          <div style="left: 90px; top: 112px; animation-delay: 0.625s"></div>
-          <div style="left: 112px; top: 112px; animation-delay: 0.5s"></div>
-        </div>
+    }
+
+    .ldio-0chhxaqs32b9 div {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #aaa;
+      animation: ldio-0chhxaqs32b9 1s linear infinite;
+    }
+
+    .loadingio-spinner-blocks-f6re9kg8ubs {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .ldio-0chhxaqs32b9 {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0;
+      /* see note above */
+    }
+
+    .ldio-0chhxaqs32b9 div {
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <div class="loader">
+    <div class="loadingio-spinner-blocks-f6re9kg8ubs">
+      <div class="ldio-0chhxaqs32b9">
+        <div style="left: 68px; top: 68px; animation-delay: 0s"></div>
+        <div style="left: 90px; top: 68px; animation-delay: 0.125s"></div>
+        <div style="left: 112px; top: 68px; animation-delay: 0.25s"></div>
+        <div style="left: 68px; top: 90px; animation-delay: 0.875s"></div>
+        <div style="left: 112px; top: 90px; animation-delay: 0.375s"></div>
+        <div style="left: 68px; top: 112px; animation-delay: 0.75s"></div>
+        <div style="left: 90px; top: 112px; animation-delay: 0.625s"></div>
+        <div style="left: 112px; top: 112px; animation-delay: 0.5s"></div>
       </div>
     </div>
+  </div>
+  <div>
     <div class="content-not-ready">
-      <div class="landing-screen">
-        <div class="small-font">Hello 👋 , my name is</div>
-        <div class="matrix-font heading">ASHISH</div>
-        <div class="sticky-nav">
-          <a
-            class="navbar-item"
-            href="#about"
-            data-target="about"
-            alt="go to about section"
-            >ABOUT</a
-          >
-          <a
-            class="navbar-item"
-            href="#projects"
-            data-target="projects"
-            alt="go to projects section"
-            >PROJECTS</a
-          >
-          <a
-            class="navbar-item"
-            href="#contact"
-            data-target="contact"
-            alt="go to contact section"
-            >LETS TALK</a
-          >
-          <a
-            class="navbar-item"
-            href="https://drive.google.com/file/d/1Z-1oQDsjSvabKXEOGg3-3YKXvJFI69bx/view"
-            target="_blank"
-            alt="get resume of Ashish Kushwaha"
-            >RESUME</a
-          >
-        </div>
-        <div class="navbar">
-          <a
-            class="navbar-item"
-            href="#about"
-            data-target="about"
-            alt="go to about section"
-            >ABOUT</a
-          >
-          <a
-            class="navbar-item"
-            href="#projects"
-            data-target="projects"
-            alt="go to projects section"
-            >PROJECTS</a
-          >
-          <a
-            class="navbar-item"
-            href="#contact"
-            data-target="contact"
-            alt="go to contact section"
-            >LETS TALK</a
-          >
-          <a
-            class="navbar-item"
-            href="https://drive.google.com/file/d/1Z-1oQDsjSvabKXEOGg3-3YKXvJFI69bx/view"
-            target="_blank"
-            alt="get resume of Ashish Kushwaha"
-            >RESUME</a
-          >
-        </div>
-        <div class="coding-profile">
-          <span
-            style="
-              font-size: 1.5em;
-              display: block;
-              color: #fff;
-              margin-top: 50px;
-              text-align: center;
-            "
-            >Hit me up if you need help with</span
-          >
-          <div class="console-container">
-            <span id="text"></span>
-            <div class="console-underscore" id="console">&#95;</div>
-          </div>
-        </div>
-        <div class="down-arrow-animation">
-          <span>↓</span>
-        </div>
-      </div>
-      <div class="about-section" data-target="about">
-        <div class="heading-left matrix-font">WELCOME TO THE "MATRIX"</div>
-        <div class="content-right">
-          Hey! My name is Ashish Kushwaha, a final year student at JSS Academy
-          of Technical Education Noida. I work mostly with tech stacks involving
-          Python and its backend stuffs like FastAPI, Flask with PostgreSQL,
-          MongoDB, MySQL. I have professional work experience with Generative
-          AI, integrating OpenAI APIs, Gemini APIs, Anthropic,etc and several
-          other open source multi-modals. I have also created several generative
-          AI based agents. I deliver high quality AI based applications - from
-          designing its backend (architecture) to deploying it to the cloud. I
-          have mid level experience with frontend technology as well.
-        </div>
-      </div>
-      <div class="experience-section">
-        <center>
-          <span class="heading-small matrix-font">EXPERIENCE</span>
-        </center>
-        <!-- <marquee>
-          <div
-            class="company-logos"
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around;
-              width: 400%;
-              margin: 20px 0;
-            "
-          >
-            <img src="images/kareai_white_logo.png" alt="KareAI Inc" h/>
-            <img src="images/mango-jelly.svg" alt="TheMangoJelly" />
-            <img src="images/basetech.png" alt="BaseTech" />
-            <img src="images/gdsc.png" alt="GDSC JSSATEN" />
-            <img src="images/kareai_white_logo.png" alt="KareAI Inc" />
-            <img src="images/mango-jelly.svg" alt="TheMangoJelly" />
-            <img src="images/basetech.png" alt="BaseTech" />
-            <img src="images/gdsc.png" alt="GDSC JSSATEN" />
-          </div>
-        </marquee> -->
-        <div class="timeline-container"></div>
-      </div>
-      <div class="skill-section">
-        <div class="heading matrix-font">SKILLS</div>
-        <div class="skill-list"></div>
-        <div class="marquee">
-          <div class="marquee-content">
-            <div class="marquee-item"><img src="images/icon_js.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_python.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_cpp.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_c.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_html.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_css.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_react.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_django.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_flask.svg" /></div>
-            <div class="marquee-item">
-              <img src="images/icon_fastapi.svg" />
+      <!-- Navbar Component -->
+      <div hx-get="components/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+      <!-- Hero Section -->
+      <section id="about" class="hero-section section">
+        <canvas id="gameOfLifeCanvas" class="game-of-life-canvas"></canvas>
+        <div class="section-container">
+          <div class="hero-content">
+            <div class="hero-image">
+              <div class="hero-image-wrapper">
+                <img src="images/portfolio_v3.webp" alt="Ashish Kushwaha" />
+              </div>
+              <img src="images/arrow_down.webp" alt="Scroll Down" class="scroll-down-arrow" />
             </div>
-            <div class="marquee-item"><img src="images/icon_mysql.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_mongo.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_git.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_linux.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_nginx.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_docker.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_sqlite.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_redis.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_azure.svg" /></div>
-
-            <div class="marquee-item"><img src="images/icon_js.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_python.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_cpp.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_c.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_html.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_css.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_react.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_django.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_flask.svg" /></div>
-            <div class="marquee-item">
-              <img src="images/icon_fastapi.svg" />
-            </div>
-            <div class="marquee-item"><img src="images/icon_mysql.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_mongo.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_git.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_linux.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_nginx.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_docker.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_sqlite.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_redis.svg" /></div>
-            <div class="marquee-item"><img src="images/icon_azure.svg" /></div>
-          </div>
-        </div>
-      </div>
-      <div class="project-section" data-target="projects">
-        <center><span class="heading matrix-font">PROJECTS</span></center>
-        <div class="project-container">
-          <div class="project-name-list-menu"></div>
-        </div>
-      </div>
-      <div class="achievements-section">
-        <center>
-          <span class="heading-small matrix-font">ACHIEVEMENTS</span>
-        </center>
-        <div class="achievement"></div>
-      </div>
-      <div class="quote-section">
-        <div class="quote-content">
-          <p class="quote-text">
-            "What is real? How do you define 'real'? If you're talking about
-            what you can feel, what you can smell, what you can taste and see,
-            then 'real' is simply electrical signals interpreted by your brain"
-          </p>
-          <p class="quote-author">- Morpheus, The Matrix</p>
-        </div>
-      </div>
-      <div class="resume-contact-section" data-target="contact">
-        <div class="resume-container">
-          <h1 class="heading-left matrix-font">RESUME</h1>
-          <div class="resume-content">
-            <p>
-              Ready to learn more about my journey? Hit the button below to grab
-              my resume and explore further:
-            </p>
-            <a
-              class="project-link"
-              target="_blank"
-              alt="get resume of Ashish Kushwaha"
-              href="https://drive.google.com/file/d/1Z-1oQDsjSvabKXEOGg3-3YKXvJFI69bx/view"
-              >Get Resume</a
-            >
-          </div>
-        </div>
-        <div class="contacts-content">
-          <h1 class="heading-left matrix-font">CONTACT</h1>
-          <div class="contacts-container">
-            Feel free to reach out to me through the following channels:
-            <div class="social-links">
-              <a
-                href="mailto:ashishkingdom@proton.me"
-                class="project-link"
-                alt="send mail to Ashish Kushwaha"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a
-                href="https://linkedin.com/in/ashishkingdom"
-                class="project-link"
-                alt="linkedIn Profile of Ashish Kushwaha"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com/AshishKingdom/"
-                class="project-link"
-                alt="Github Profile of Ashish Kushwaha"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://twitter.com/AshishKingdom"
-                class="project-link"
-                alt="Twitter Profile of Ashish Kushwaha"
-                target="_blank"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
+            <div class="hero-text">
+              <h1 class="hero-title">Hi, I am Ashish Kushwaha</h1>
+              <p class="hero-description text-large">
+                I have been <i>professionally</i> building in the AI, backend, and infrastructure space for around 2
+                years, most
+                recently as a
+                Founding AI Engineer at <a href="https://weya.ai/" target="_blank" class="link-underline">weya.ai <i
+                    class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a>.
+                My recent work involves designing agentic AI workflows with opensourced LLMs, OpenAI, Gemini,
+                Anthropic, etc., architecting real-time voice AI for telephony services, and scaling low-latency RAG
+                systems for parallel phone calls. I love open source and try to contribute whenever I can. <span
+                  class="text-special">I strongly
+                  believe in learning by doing.</span>
+                Sometimes,
+                you will find me playing with different stuff like fractals, algorithmic art with p5.js, shaders,
+                or game
+                development. I live on the Internet by name <i>AshishKingdom</i>.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer">
-        <div class="site-info">
-          <p>
-            Copyright © 2023-24 Ashish Kushwaha<br />
-            All the background images are generated by me using QB64.<br />
-            You can request the source code for the same on my email.<br />
-            Icons in the skill section are exported using skillicons.dev<br />
-            <br />
-            <br />
-            <br />
-            Made with <span style="color: #f00">❤️</span> by Ashish Kushwaha
-          </p>
-        </div>
-      </div>
+      </section>
+      <!-- Timeline -->
+      <div hx-get="components/timeline.html" hx-trigger="load" hx-swap="outerHTML"></div>
+      <hr class="dots" />
+      <!-- Footer -->
+      <div hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
     </div>
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="/css/style.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.body.classList.remove("loading");
+          document.querySelector(".loader").style.display = "none";
+          document.querySelector(".content-not-ready").style.display = "block";
 
-    <script src="js/achievements.js"></script>
-    <script src="js/skills.js"></script>
-    <script src="js/timeline.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="/js/portfolio_func.js"></script>
-    <script src="js/console_text.js"></script>
-  </body>
+          // Initialize Game of Life
+          initGameOfLife();
+        }, 1000);
+      });
+    </script>
+    <script src="js/game_of_life.js"></script>
+</body>
+
 </html>
