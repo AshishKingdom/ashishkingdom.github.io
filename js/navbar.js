@@ -86,7 +86,7 @@ function initNavbarToggle() {
             });
         });
     }
-    console.log("Navbar script loaded");
+    // console.log("Navbar script loaded");
 }
 
 
