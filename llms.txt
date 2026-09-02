@@ -1,0 +1,33 @@
+# Ashish Kushwaha (AshishKingdom)
+
+> Personal portfolio of Ashish Kushwaha, a Founding AI Engineer focused on agentic AI, backend systems, infrastructure, real-time voice AI, and low-latency retrieval-augmented generation (RAG).
+
+Ashish builds AI products and scalable backend systems. His recent work includes voice agents for telephony, AI workflows using open-source and commercial LLMs, and infrastructure for concurrent real-time calls. He is also an open-source contributor with interests in graphics programming, generative art, game development, and developer tools.
+
+Canonical site: https://ashishkingdom.tech/
+
+## Portfolio
+
+- [Home and professional history](https://ashishkingdom.tech/): Biography, current work, experience timeline, and selected technical projects.
+- [Articles](https://ashishkingdom.tech/articles.html): Technical writing by Ashish; no articles are published there yet.
+- [Resume](https://drive.google.com/file/d/1Z-1oQDsjSvabKXEOGg3-3YKXvJFI69bx/view): Detailed professional resume hosted on Google Drive.
+
+## Profiles and Contact
+
+- [GitHub](https://github.com/ashishkingdom): Open-source projects and code by Ashish.
+- [LinkedIn](https://www.linkedin.com/in/ashishkingdom/): Professional profile and experience.
+- [Email](mailto:hello@ashishkingdom.tech): Preferred direct contact address.
+
+## Selected Projects
+
+- [QB64 OpenGL Engine](https://github.com/AshishKingdom/QB64-OpenGL-Engine): An experimental open-world game engine built with QB64 and OpenGL.
+- [p5js.bas](https://github.com/AshishKingdom/p5js.bas): A QB64 library inspired by p5.js, co-created with Fellippe Heitor.
+- [Hunter's Revenge](https://github.com/AshishKingdom/Hunter-Revenge): A 2D pixel-art shooter game made with QB64.
+- [aKFrameWork](https://github.com/AshishKingdom/aKFrameWork): A Windows-style GUI framework for QB64.
+- [GUI Menu Bar](https://github.com/AshishKingdom/GUI-Menu-Bar): A GUI menu library for QB64.
+
+## Optional
+
+- [X](https://x.com/ashishkingdom): Social profile and short-form updates.
+- [Instagram](https://www.instagram.com/ashishkingdom_): Personal social profile.
+- [itch.io](https://kingashish.itch.io/hunters-revenge): Download page for Hunter's Revenge.
