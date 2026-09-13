@@ -4,7 +4,33 @@
             <h1 class="preview-title" style="margin-left: var(--spacing-sm);">History</h1>
             <ul class="timeline">
                 <li>
-                    <strong>2025-Present</strong>
+                    <strong>2026-Present</strong>
+                    <ul>
+                        <li>Worked on a cross-memory layer to sync lead memory across whatsapp AI, voice AI and email
+                            AI, so all agents share the same context.</li>
+                        <li>Optimized the post-call analysis pipeline to reduce LLM cost by <span
+                                class="text-special">70%</span>.</li>
+                        <li>Made optimizations to increase LLM cache-hit ratio from <span
+                                class="text-special">40% to 90%</span>.</li>
+                        <li>Our team scaled voice AI to <span class="text-special">500K+ minutes/month</span>, handling
+                            <span class="text-special">3M+ phone calls</span> every month.</li>
+                        <li>Optimized the noise mixing pipeline, reducing audio frame CPU processing latency from <span
+                                class="text-special">113.5ms to 0.07&mu;s</span> using static memory (it used
+                            to increase linearly with concurrent sessions before).</li>
+                        <li>Built a prompt-level feature using special meta-tags to reduce overall prompt size for
+                            each lead.</li>
+                        <li>Optimized the AI agent code to reduce time taken to deliver the first audio packet from
+                            <span class="text-special">1s to 200ms</span>.</li>
+                        <li>Integrated an observability tool for monitoring, alerts and dashboards. Also added an LLM
+                            evals system to our services.</li>
+                        <li>Added deep extraction of session journeys, visualized using sankey graphs, to help
+                            enterprises better understand their users.</li>
+                        <li>Made improvements to the garbage collector for our Python services to retain unused heap
+                            memory, so KEDA scaling on k8s works more efficiently.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>2025-26</strong>
                     <ul>
                         <li>I continued working at WeyaAI, adding whatsapp AI and email AI features to the product.
                             Later joined as Founding AI Engineer.</li>
@@ -15,9 +41,9 @@
                         <li>Integrated various telephoney including Exotel, Plivo, Twilio, Telnyx, Ozonetel, etc.</li>
                         <li>Implemented features like warm call transfer, DTMF, IVR navigations, voicemails retry,
                             memory retention and many more.</li>
-                        <li>I am currently working on optimization and scaling the system to handle 10x of current load.
+                        <li>Worked on optimization and scaling the system to handle 10x of previous load.
                         </li>
-                        <li>Also brainstorming to make creation of voice agents easier for non-technical users.</li>
+                        <li>Also brainstormed to make creation of voice agents easier for non-technical users.</li>
                     </ul>
                 </li>
                 <li>
