@@ -474,7 +474,16 @@ a:hover {
     overflow: hidden;
 }
 
-.game-of-life-canvas {
+.hero-section.section {
+    padding-top: calc(80px + var(--spacing-lg));
+}
+
+.hero-section > .section-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.ascii-wave-canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -486,8 +495,8 @@ a:hover {
 
 .hero-content {
     display: grid;
-    grid-template-columns: minmax(300px, 400px) 1fr;
-    gap: var(--spacing-3xl);
+    grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+    gap: clamp(32px, 4vw, 64px);
     align-items: center;
     position: relative;
     z-index: 1;
@@ -525,7 +534,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
-    align-items: center;
+    align-items: flex-start;
+    min-width: 0;
 }
 
 .scroll-down-arrow {
@@ -533,8 +543,8 @@ a:hover {
     bottom: 0;
     left: 0;
     transform: translateY(calc(100% + var(--spacing-md)));
-    width: 6vw;
-    height: 20vh;
+    width: 64px;
+    height: 140px;
     opacity: 0.5;
     z-index: 1;
 }
@@ -544,6 +554,7 @@ a:hover {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 0;
+    text-wrap: balance;
 }
 
 .hero-description {
@@ -552,41 +563,57 @@ a:hover {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .hero-section {
-        min-height: 100vh;
-        padding-top: calc(80px + var(--spacing-lg));
+        min-height: 0;
     }
 
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
     }
 
     .hero-image-wrapper {
-        max-width: 300px;
+        max-width: 340px;
         margin: 0 auto;
     }
 
-    .hero-image-wrapper::after {
-        background: linear-gradient(to bottom,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0) 60%,
-                rgba(255, 255, 255, 0.8) 90%,
-                rgba(255, 255, 255, 1) 100%);
-    }
-
     .hero-text {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        align-items: center;
         text-align: center;
     }
 
+    .hero-title {
+        font-size: clamp(2.25rem, 4.8vw, 3.25rem);
+    }
+
     .hero-description {
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 1.125rem;
+        line-height: 1.75;
+        text-align: left;
     }
 
     .scroll-down-arrow {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        gap: 28px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 300px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
     }
 }
 
