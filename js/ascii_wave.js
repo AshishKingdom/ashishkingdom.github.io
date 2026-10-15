@@ -2,6 +2,15 @@
 function initAsciiWave() {
     const canvas = document.getElementById('asciiWaveCanvas');
     if (!canvas || canvas.dataset.initialized) return;
+    // Keep backing-store dimensions out of layout, even with a cached old stylesheet.
+    Object.assign(canvas.style, {
+        position: 'absolute',
+        inset: '0',
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: '0'
+    });
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.dataset.initialized = 'true';
