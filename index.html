@@ -137,7 +137,7 @@
       <div hx-get="components/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
       <!-- Hero Section -->
       <section id="about" class="hero-section section">
-        <canvas id="asciiWaveCanvas" class="ascii-wave-canvas" aria-hidden="true"></canvas>
+        <canvas id="heroFlowField" class="hero-flow-field" aria-hidden="true"></canvas>
         <div class="section-container">
           <div class="hero-content">
             <div class="hero-image">
@@ -181,11 +181,11 @@
           document.querySelector(".loader").style.display = "none";
           document.querySelector(".content-not-ready").style.display = "block";
 
-          initAsciiWave();
+          initHeroFlowField();
         }, 1000);
       });
     </script>
-    <script src="js/ascii_wave.js?v=3a3e095afc02"></script>
+    <script src="js/hero_flow_field.js?v=1"></script>
 </body>
 
 </html>
