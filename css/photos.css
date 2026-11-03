@@ -1046,7 +1046,7 @@ button:focus-visible {
 .lb {
     position: fixed;
     inset: 0;
-    z-index: 100;
+    z-index: 1001;
     background: rgba(247, 244, 239, 0.97);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1079,6 +1079,17 @@ button:focus-visible {
     justify-content: center;
 }
 
+.lb-bar {
+    min-height: 44px;
+    padding-right: calc(44px + 1rem);
+}
+
+.lb-close {
+    position: absolute;
+    top: 1.25rem;
+    right: var(--gut);
+}
+
 .lb-frame {
     position: relative;
     overflow: clip;
@@ -1108,6 +1119,17 @@ button:focus-visible {
 .lb-foot > div:last-child {
     display: flex;
     gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .lb-bar {
+        min-height: 0;
+        padding-right: 0;
+    }
+
+    .lb-close {
+        position: static;
+    }
 }
 
 /* ============================================

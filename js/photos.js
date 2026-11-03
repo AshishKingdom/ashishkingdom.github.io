@@ -392,13 +392,13 @@
         const inner = p.src && !p.isVideo ? '<img class="media" src="' + esc(p.src) + '" alt="' + esc(p.label) + '">'
             : p.src ? '<video class="media" src="' + esc(p.src) + '"' + (p.poster ? ' poster="' + esc(p.poster) + '"' : '') + ' controls autoplay playsinline></video>'
                 : '<div class="fill ' + p.kb + '">' + stand(Object.assign({}, p, { uid: 'lb' + p.uid }), 600, 400, 'rim') + '</div>';
-        lb.innerHTML = '<div class="lb-bar"><span class="mono muted">' + p.num + ' / ' + data.all.length + ' · ' + esc(p.chapter) + '</span>'
-            + '<button type="button" class="icon-btn" data-lb="close" aria-label="Close viewer"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>'
+        lb.innerHTML = '<div class="lb-bar"><span class="mono muted">' + p.num + ' / ' + data.all.length + ' · ' + esc(p.chapter) + '</span></div>'
             + '<div class="lb-stage"><div class="lb-frame" style="width: ' + lbw + '; aspect-ratio: ' + p.ar + '; background: ' + p.s0 + '">' + inner
             + (p.isVideo ? '<span class="vbadge">' + PLAY + esc(p.badge) + '</span>' : '') + '</div></div>'
             + '<div class="lb-foot"><div><span class="lb-title">' + esc(p.title) + '</span><span class="mono muted" style="letter-spacing: 0.08em">' + esc(p.meta) + '</span></div>'
             + '<div><button type="button" class="icon-btn" data-lb="prev" aria-label="Previous"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'
-            + '<button type="button" class="icon-btn" data-lb="next" aria-label="Next"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div>';
+            + '<button type="button" class="icon-btn" data-lb="next" aria-label="Next"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>'
+            + '<button type="button" class="icon-btn lb-close" data-lb="close" aria-label="Close viewer"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div></div>';
     }
 
     function openLB(i, from) {
