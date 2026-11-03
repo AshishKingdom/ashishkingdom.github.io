@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Clicks by Ashish | Photographs &amp; Films by Ashish Kushwaha</title>
+  <meta name="title" content="Clicks by Ashish | Photographs &amp; Films by Ashish Kushwaha" />
+  <meta name="description"
+    content="Photographs and films by Ashish Kushwaha from treks, summits and travels — Triund and beyond." />
+  <meta name="author" content="Ashish Kushwaha" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ashishkingdom.tech/photos.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashishkingdom.tech/photos.html" />
+  <meta property="og:title" content="Clicks by Ashish" />
+  <meta property="og:description" content="Photographs and films from treks, summits and travels." />
+  <meta property="og:image" content="https://ashishkingdom.tech/images/portfolio_v3.webp" />
+  <meta property="og:site_name" content="Ashish Kushwaha" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Clicks by Ashish" />
+  <meta property="twitter:description" content="Photographs and films from treks, summits and travels." />
+  <meta property="twitter:image" content="https://ashishkingdom.tech/images/portfolio_v3.webp" />
+
+  <meta name="theme-color" content="#f7f4ef" />
+
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+    integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/bb50c14ef6.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/photos.css">
+</head>
+
+<body id="top">
+  <!-- Navbar: the same component as the rest of the site -->
+  <div hx-get="components/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
+  <div class="prog" aria-hidden="true"></div>
+
+  <!-- Built from js/photos.config.js by js/photos.js -->
+  <main id="photos"></main>
+  <noscript>
+    <p style="padding: 8rem 1.5rem; text-align: center">This page needs JavaScript to show the photographs.</p>
+  </noscript>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo and video viewer" hidden></div>
+
+  <!-- Footer -->
+  <div hx-get="components/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <script src="js/photos.config.js"></script>
+  <script src="js/photos.js"></script>
+</body>
+
+</html>
