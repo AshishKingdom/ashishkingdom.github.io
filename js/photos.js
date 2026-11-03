@@ -277,6 +277,7 @@
 
     function heroHTML(d) {
         const h = CFG.hero;
+        const contours = Array.from({ length: 9 }, (_, i) => '<path d="M-80 ' + (320 + i * 13) + ' C100 ' + (60 + i * 13) + ', 180 ' + (145 + i * 13) + ', 285 ' + (170 + i * 9) + ' S365 ' + (58 + i * 9) + ', 470 ' + (68 + i * 7) + ' S670 ' + (5 + i * 6) + ', 750 -100"/>').join('');
         const cols = d.heroCols.map((col) => '<div class="hcol ' + col.cls + '" style="margin-top: ' + col.off + '; --pm: ' + col.pm + '">'
             + '<div class="hcol-track" style="--dur: ' + col.dur + '; --dir: ' + col.dir + '">'
             + col.tiles.map((t) => '<div class="htile" style="aspect-ratio: ' + t.ar + '; background: ' + t.s0 + '">'
@@ -290,13 +291,14 @@
             + '<header class="hero" aria-label="' + esc(h.title + ' ' + h.by) + ' — photographs and films">'
             + '<div class="hcollage" aria-hidden="true">' + cols + '</div>'
             + '<div class="hfade" aria-hidden="true"></div>'
+            + '<svg class="hcontours" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g>' + contours + '</g><g transform="translate(1400 800) rotate(180)">' + contours + '</g></svg>'
             + '<h1 class="mega htitle"><span class="hbig">' + esc(String(h.title || '').toUpperCase()) + '</span><span class="hby">' + esc(h.by) + '</span></h1>'
             + '<div class="hreveal"><span class="mono muted">' + d.all.length + ' frames · ' + d.chapters.length + ' places</span><p>' + esc(h.reveal) + '</p></div>'
             + '<div class="hero-meta">'
             + '<p class="hero-sub">' + esc(h.subtitle) + '</p>'
             + '<a class="hcue" href="#intro" aria-label="Scroll down to the photos"><span class="mono">Scroll</span>'
             + '<span class="hcue-btn"><svg class="ic hbob" width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></span></a>'
-            + '<p class="mono hero-kicker">' + esc(h.kicker) + '</p>'
+            + '<p class="mono hero-kicker">' + esc(h.kicker).replace(' · ', '<span class="hero-dot" aria-hidden="true"> • </span>') + '</p>'
             + '</div></header></div>';
     }
 
