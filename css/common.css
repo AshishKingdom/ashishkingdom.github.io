@@ -873,6 +873,9 @@ hr {
     /* background: url('images/footer_bg.webp') top; */
     margin-top: 50px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%), url('../images/footer_bg.webp') top;
+    /* grow the hills with the footer when it's taller than the image (phones), instead of tiling */
+    background-size: auto, auto max(100%, 482px);
+    background-repeat: no-repeat, repeat-x;
     /* border-top: 1px solid var(--glass-border); */
     padding: var(--spacing-2xl) var(--spacing-lg);
 }
