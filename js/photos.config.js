@@ -43,9 +43,9 @@ window.PHOTOS_CONFIG = {
         collage: [
             { src: 'images/photos/valley-of-flowers/wildflower-meadow-between-mountains.jpg', ratio: '4/5' },
             { src: 'images/photos/triund/rocky-meadow-and-snowy-range.jpg', ratio: '4/5' },
-            { src: 'images/photos/nag-tibba/hiker-on-golden-forest-slope.jpg', ratio: '4/5' },
+            { src: 'images/photos/nag-tibba/sunlit-slope-above-cloud-sea.jpg', ratio: '4/5' },
             { src: 'images/photos/valley-of-flowers/clouds-drifting-over-green-valley.jpg', ratio: '4/5' },
-            { src: 'images/photos/nag-tibba/hiker-facing-cloud-filled-valley.jpg', ratio: '4/5' },
+            { src: 'images/photos/nag-tibba/cloud-sea-framed-by-trees.jpg', ratio: '4/5' },
             { src: 'images/photos/triund/snowy-mountains-under-grey-clouds.jpg', ratio: '4/5' },
             { src: 'images/photos/rishikesh/winding-river-through-mountain-valley.jpg', ratio: '4/5' },
             { src: 'images/photos/nag-tibba/setting-sun-above-treeline.jpg', ratio: '4/5' },
